@@ -14,8 +14,9 @@ export default function Header() {
 
     const navLinks = [
         { name: 'Home', href: '/' },
+        { name: 'About', href: '/about' },
         { name: 'Resume', href: '/resume' },
-        { name: 'Blog', href: '/blog' },
+        { name: 'Blog', href: '/blog' }
     ];
 
     // Блокируем скролл основной страницы при открытом меню
