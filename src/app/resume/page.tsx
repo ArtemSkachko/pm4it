@@ -42,10 +42,16 @@ export default function ResumePage() {
     }, []);
 
     const sortedEducation = useMemo(() => {
-        const sortFn = (a: any, b: any): number => {
+        // Извлекаем тип одного элемента из массива education
+        type EducationItem = (typeof education)[number];
+
+        const sortFn = (a: EducationItem, b: EducationItem): number => {
             const aEnd = a.endDate ? Number(a.endDate) : 9999;
             const bEnd = b.endDate ? Number(b.endDate) : 9999;
-            return (bEnd - aEnd) || (Number(b.startDate) - Number(a.startDate));
+            const aStart = Number(a.startDate);
+            const bStart = Number(b.startDate);
+
+            return (bEnd - aEnd) || (bStart - aStart);
         };
 
         return {

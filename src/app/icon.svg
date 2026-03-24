@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 187.63 214.28">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #00b4f2;
+      }
+
+      .cls-2 {
+        fill: url(#_Безымянный_градиент_73);
+      }
+
+      .cls-2, .cls-3, .cls-4, .cls-5, .cls-6 {
+        mix-blend-mode: multiply;
+      }
+
+      .cls-3 {
+        fill: url(#_Безымянный_градиент_67);
+      }
+
+      .cls-7 {
+        fill: #009ce8;
+      }
+
+      .cls-4 {
+        opacity: .4;
+      }
+
+      .cls-8 {
+        isolation: isolate;
+      }
+
+      .cls-5 {
+        fill: url(#_Безымянный_градиент_62);
+      }
+
+      .cls-9 {
+        fill: #0065c4;
+      }
+
+      .cls-6 {
+        fill: url(#_Безымянный_градиент_64);
+      }
+    </style>
+    <linearGradient id="_Безымянный_градиент_73" data-name="Безымянный градиент 73" x1="-83.4" y1="251.29" x2="-75.89" y2="293.86" gradientTransform="translate(-54.05 -158.41) rotate(-30)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fff" stop-opacity="0"/>
+      <stop offset=".32" stop-color="#fff" stop-opacity="0"/>
+      <stop offset=".42" stop-color="#777" stop-opacity=".53"/>
+      <stop offset="1" stop-color="#000"/>
+    </linearGradient>
+    <linearGradient id="_Безымянный_градиент_62" data-name="Безымянный градиент 62" x1="-59.47" y1="217.36" x2="-18.12" y2="198.95" gradientTransform="translate(-54.05 -158.41) rotate(-30)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fff" stop-opacity="0"/>
+      <stop offset=".62" stop-color="#fff" stop-opacity="0"/>
+      <stop offset=".67" stop-color="#777" stop-opacity=".53"/>
+      <stop offset="1" stop-color="#000"/>
+    </linearGradient>
+    <linearGradient id="_Безымянный_градиент_67" data-name="Безымянный градиент 67" x1="-106.41" y1="313.78" x2="-100.43" y2="359.29" gradientTransform="translate(-54.05 -158.41) rotate(-30)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fff" stop-opacity="0"/>
+      <stop offset=".29" stop-color="#fff" stop-opacity="0"/>
+      <stop offset=".39" stop-color="#777" stop-opacity=".53"/>
+      <stop offset="1" stop-color="#000"/>
+    </linearGradient>
+    <linearGradient id="_Безымянный_градиент_64" data-name="Безымянный градиент 64" x1="63.14" y1="313.96" x2="57.26" y2="355.74" gradientTransform="translate(-54.05 -158.41) rotate(-30)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fff" stop-opacity="0"/>
+      <stop offset=".3" stop-color="#fff" stop-opacity="0"/>
+      <stop offset=".4" stop-color="#777" stop-opacity=".53"/>
+      <stop offset="1" stop-color="#000"/>
+    </linearGradient>
+  </defs>
+  <g class="cls-8">
+    <g id="_Слой_2" data-name="Слой 2">
+      <g id="_Слой_1-2" data-name="Слой 1">
+        <g>
+          <g>
+            <path class="cls-9" d="M37.12,0h0s0,21.43,0,21.43v21.43s0,0,0,0v5.35s0,16.08,0,16.08v5.35s0,16.07,0,16.07v10.71s0,42.86,0,42.86L0,117.85l.04-.02v-10.71s0-10.72,0-10.72v-10.71s-.04.02-.04.02v-21.43s0-21.43,0-21.43v-21.42s0,0,0,0C2.5,19.26,34,1.08,37.12,0Z"/>
+            <path class="cls-9" d="M185.6,85.72c.04,6.63.05,13.29.05,19.98,0,7.63-.02,15.22-.07,22.77h0s0,.06-.02.09l-37.09-21.42-27.84-16.07-37.12-21.43,64.96-5.35c12.37,7.14,24.75,14.29,37.12,21.43Z"/>
+            <path class="cls-9" d="M37.12,150.01v21.43s0,21.43,0,21.43v21.4s-.05-.01-.08-.02h0c-6.98-3.95-13.97-7.9-20.95-11.85-5.36-3.17-10.72-6.34-16.07-9.51h0s0-.02,0-.02v-10.71s0,0,0,0v-10.71s37.12-21.43,37.12-21.43Z"/>
+          </g>
+          <g class="cls-4">
+            <polygon class="cls-2" points="37.12 86.83 37.12 139.29 0 160.72 0 117.86 37.12 86.83"/>
+            <rect class="cls-1" x="0" y="117.86" width="0" height="42.86" transform="translate(-69.64 18.66) rotate(-30)"/>
+            <path class="cls-5" d="M37.12,0h0s0,55.21,0,55.21L0,21.43h0C2.5,19.27,34,1.08,37.12,0Z"/>
+            <path class="cls-3" d="M37.12,160.72v53.55s-.08-.02-.11-.04C34.49,213.36,1.38,194.07,0,192.88h0s37.11-32.16,37.11-32.16Z"/>
+            <polygon class="cls-1" points="0 192.87 0 192.86 0 192.88 0 192.87"/>
+            <path class="cls-6" d="M185.6,85.72h0c.03,6.95.07,13.9.1,20.85-.04,7.3-.08,14.6-.12,21.9h0s0,.06-.02.09l-46.37-26.77c15.47-5.36,30.94-10.71,46.4-16.07Z"/>
+          </g>
+          <g>
+            <polygon class="cls-7" points="120.63 48.22 148.47 64.29 157.75 69.65 0 160.72 0 150.01 0 117.86 120.63 48.22"/>
+            <path class="cls-7" d="M111.35,42.86l-37.12,21.43-13.92-8.03-4.64-2.68-13.92-8.03-4.64-2.68h0s-17.65-10.19-17.65-10.19l-.91-.53L0,21.43h0c2.5-2.17,5.11-4.23,7.83-6.19,3.09-2.23,6.34-4.33,9.72-6.28s6.81-3.71,10.29-5.27c3.06-1.38,6.16-2.61,9.28-3.69l18.55,10.72,18.56,10.72,18.56,10.71,9.28,5.36,9.27,5.36Z"/>
+            <path class="cls-7" d="M88.15,141.97l18.56,32.14-69.57,40.17s-.02,0-.02-.01c-.04,0-.08-.02-.11-.04C23.57,209.57,10.98,202.38,0,192.88h0s88.15-50.91,88.15-50.91Z"/>
+            <path class="cls-7" d="M185.6,85.72h0c2.75,14.27,2.67,28.78-.02,42.75h0s0,.06-.02.09h0s0,.02,0,.03l-69.57,40.17-18.56-32.14,88.15-50.89h.01Z"/>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
