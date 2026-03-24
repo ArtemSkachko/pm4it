@@ -5,12 +5,17 @@ import { experience, skills, languages, education, interests } from "@/data/resu
 import PDFClientWrapper from "@/components/resume/PDFClientWrapper";
 import { getPersonSchema } from '@/lib/seo';
 import { ExternalLink, Target, Briefcase, GraduationCap, Code2 } from 'lucide-react';
+import { sendGAEvent } from '@next/third-parties/google'; // <-- Импорт
 
 export default function ResumePage() {
     const [expandedGroups, setExpandedGroups] = useState<Record<string, boolean>>({});
     const [expandedJobs, setExpandedJobs] = useState<Record<number, boolean>>({});
     const [showAllEdu, setShowAllEdu] = useState(false);
     const [showFloatingButton, setShowFloatingButton] = useState(false);
+
+    useEffect(() => {
+        sendGAEvent({ event: 'view_resume_page' });
+    }, []);
 
     useEffect(() => {
         const handleScroll = () => {

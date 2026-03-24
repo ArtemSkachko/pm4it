@@ -6,6 +6,7 @@ import PDFClientWrapper from '@/components/resume/PDFClientWrapper';
 import { useState, useEffect } from 'react';
 import { Menu, X, Mail, ArrowRight } from 'lucide-react';
 import ContactModal from './ContactModal';
+import { sendGAEvent } from '@next/third-parties/google';
 
 export default function Header() {
     const pathname = usePathname();
@@ -66,7 +67,10 @@ export default function Header() {
                     {/* Buttons */}
                     <div className="flex items-center gap-2 sm:gap-4">
                         <button
-                            onClick={() => setIsContactOpen(true)}
+                            onClick={() => {
+                                sendGAEvent({ event: 'contact_click', source: 'desktop_header' });
+                                setIsContactOpen(true);
+                            }}
                             className="hidden sm:flex items-center justify-center px-5 py-2 text-sm font-bold text-slate-300 hover:text-white border border-slate-700 hover:border-slate-500 rounded-full transition-all bg-white/5 hover:bg-white/10 active:scale-95"
                         >
                             Contact
@@ -125,6 +129,7 @@ export default function Header() {
                     <div className="space-y-8">
                         <button
                             onClick={() => {
+                                sendGAEvent({ event: 'contact_click', source: 'mobile_menu' });
                                 setIsMobileMenuOpen(false);
                                 setIsContactOpen(true);
                             }}
