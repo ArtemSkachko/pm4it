@@ -5,6 +5,7 @@ import Header from "@/components/ui/Header";
 import Footer from "@/components/ui/Footer";
 import NextTopLoader from 'nextjs-toploader';
 import { getPersonSchema } from '@/lib/seo'; // Импортируем нашу схему
+import { GoogleAnalytics } from '@next/third-parties/google'; // <-- 1. Импортируем аналитику
 
 const geistSans = Geist({
     variable: "--font-geist-sans",
@@ -107,6 +108,9 @@ export default function RootLayout({
         <Header />
             {children}
         <Footer />
+        {process.env.NEXT_PUBLIC_GA_ID && (
+            <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID} />
+        )}
         </body>
         </html>
     );
