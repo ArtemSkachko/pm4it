@@ -6,10 +6,14 @@ import { FileText, Loader2 } from 'lucide-react';
 import { buttonStyles } from './PDFClientWrapper';
 
 export default function DownloadButton() {
+    // Формируем динамическое имя файла
+    const currentYear = new Date().getFullYear();
+    const dynamicFileName = `Artem Skachko - Project Manager - ${currentYear}.pdf`;
+
     return (
         <PDFDownloadLink
             document={<MyResumePDF />}
-            fileName="Artem_Skachko_Resume.pdf"
+            fileName={dynamicFileName}
             className={buttonStyles}
         >
             {({ loading }) => (

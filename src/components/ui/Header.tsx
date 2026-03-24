@@ -16,7 +16,8 @@ export default function Header() {
         { name: 'Home', href: '/' },
         { name: 'About', href: '/about' },
         { name: 'Resume', href: '/resume' },
-        { name: 'Blog', href: '/blog' }
+        { name: 'Blog', href: '/blog' },
+        { name: 'Knowledge', href: '/resources' }
     ];
 
     // Блокируем скролл основной страницы при открытом меню
@@ -29,9 +30,8 @@ export default function Header() {
         return () => { document.body.style.overflow = 'unset'; };
     }, [isMobileMenuOpen]);
 
-    useEffect(() => {
-        setIsMobileMenuOpen(false);
-    }, [pathname]);
+    // УДАЛИЛИ useEffect, который вызывал ошибку линтера.
+    // Вместо него используем onClick в самих ссылках ниже.
 
     return (
         <>
@@ -87,12 +87,11 @@ export default function Header() {
                 </div>
             </header>
 
-            {/* 2. ВЫЕЗЖАЮЩАЯ ШТОРКА (ПОЛНОСТЬЮ ВНЕ ХЕДЕРА) */}
+            {/* 2. ВЫЕЗЖАЮЩАЯ ШТОРКА */}
             <div className={`
                 fixed inset-0 z-[200] bg-black/80 backdrop-blur-2xl md:hidden transition-all duration-500 ease-in-out flex flex-col
                 ${isMobileMenuOpen ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-full pointer-events-none'}
             `}>
-                {/* Собственная шапка шторки (для кнопки закрытия) */}
                 <div className="h-16 flex items-center justify-between px-4 border-b border-slate-800/50 shrink-0">
                     <span className="text-xl font-black tracking-tighter text-white">
                         pm4it<span className="text-blue-600">.</span>com
@@ -105,15 +104,14 @@ export default function Header() {
                     </button>
                 </div>
 
-                {/* Контент шторки */}
                 <nav className="flex-1 flex flex-col justify-between p-8 pb-12 overflow-hidden">
-                    {/* Ссылки */}
                     <div className="flex flex-col gap-[3vh] mt-4">
-                        <p className="text-[10px] uppercase tracking-[0.3em] text-slate-500 font-bold mb-2">// Navigation</p>
+                        <p className="text-[10px] uppercase tracking-[0.3em] text-slate-500 font-bold mb-2">{'//'}Navigation</p>
                         {navLinks.map((link) => (
                             <Link
                                 key={link.href}
                                 href={link.href}
+                                onClick={() => setIsMobileMenuOpen(false)} // ЗАКРЫВАЕМ ПРИ КЛИКЕ
                                 className={`text-[clamp(2.5rem,12vw,5rem)] leading-none font-black tracking-tighter flex items-center justify-between group transition-colors ${
                                     pathname === link.href ? 'text-blue-600' : 'text-white'
                                 }`}
@@ -124,7 +122,6 @@ export default function Header() {
                         ))}
                     </div>
 
-                    {/* Подвал шторки */}
                     <div className="space-y-8">
                         <button
                             onClick={() => {

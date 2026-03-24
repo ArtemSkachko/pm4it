@@ -34,6 +34,8 @@ export interface Experience {
         summary: string[];
         responsibilities: string[];
         goals: string[];
+        atsSummary?: string;
+        atsResponsibilities?: string[];
     };
 }
 
@@ -51,118 +53,134 @@ export const languages: Language[] = [
         level: 'C2'
     },
 ];
-
 export const interests: Interest[] = [
     {
-        name: 'Running',
-        description: 'I have developed a passion for running, consistently covering distances of approximately 15 kilometers over the past six months.'
+        name: 'Endurance & Discipline (Running)',
+        description: 'Consistent long-distance runner with a 15km baseline. For me, running is a moving meditation and a rigorous test of discipline that translates directly into high-pressure project management and long-term professional stamina.'
     },
     {
-        name: 'Technology Enthusiast',
-        description: 'I enjoy delving into the world of high technology, exploring the origins and concepts behind remarkable innovations that benefit humanity.'
+        name: 'Technological Archeology',
+        description: 'I don’t just use technology; I study its evolution. I enjoy deconstructing the "why" and "how" behind transformative innovations, seeking the elegant logic that allows complex systems to benefit humanity.'
     },
     {
-        name: 'Plant Cultivation',
-        description: 'Growing plants is a cherished hobby of mine, influenced by the extensive gardens maintained by my parents and grandparents throughout generations.'
+        name: 'Growth Systems (Plant Cultivation)',
+        description: 'A third-generation cultivator. Growing plants—from family gardens to my current Batumi-based avocado project—teaches me the value of patience, environmental optimization, and the meticulous care required for long-term "organic" growth.'
     },
     {
-        name: 'Design',
-        description: 'I have a keen interest in design, whether it\'s creating and constructing physical or digital creations. I\'m particularly drawn to optimizing, speeding up, simplifying, and enhancing the reliability of various phenomena and objects.'
+        name: 'Systemic Design',
+        description: 'Obsessed with the four pillars of creation: Optimization, Speed, Simplicity, and Reliability. Whether I am architecting a digital interface or assembling a physical CNC machine, my goal is to strip away the redundant and fortify the essential.'
     },
     {
-        name: 'Travel',
-        description: 'Although my love for travel is hindered by the unfortunate circumstances of conflict in my country, I am eager to explore new places and cultures when the opportunity arises.'
+        name: 'Behavioral Psychology',
+        description: 'I study human habits and behavioral patterns to engineer better workflows and user experiences. Applying psychological insights allows me to lead teams of 50+ with empathy and build products that resonate with deep-seated human needs.'
     },
     {
-        name: 'Psychology',
-        description: 'I find psychology fascinating, particularly in understanding human habits and behavior. I study these aspects for professional purposes, applying insights to my work.'
+        name: 'Global Perspectives (Travel)',
+        description: 'A keen observer of diverse cultures and social structures. While current geopolitical challenges in my home country temporarily limit my movement, I remain a lifelong student of global connectivity and resilient social systems.'
     },
 ];
-
-
 export const skills: SkillSection[] = [
     {
-        section: 'Management & Strategy',
+        section: 'Management & Operations',
         items: [
             { name: 'Project/Product Management', experience: 13 },
-            { name: 'Team Leadership', experience: 10 },
-            { name: 'Strategic Planning (ROI focus)', experience: 9 },
+            { name: 'Crisis & Change Management', experience: 9 }, // Объединил с банкротством
+            { name: 'Team Leadership (50+ reports)', experience: 10 },
+            { name: 'Strategic Planning & ROI', experience: 9 },
             { name: 'Budgeting & P&L Control', experience: 8 },
-            { name: 'Risk Management', experience: 8 },
             { name: 'Stakeholder Management', experience: 7 },
-            { name: 'Negotiation & Conflict Resolution', experience: 8 },
-            { name: 'Business Analysis', experience: 5 },
             { name: 'Unit Economics (LTV, ARPU)', experience: 4 },
+            { name: 'Business Analysis', experience: 6 },
+            { name: 'Negotiation & Conflict Resolution', experience: 10 },
         ]
     },
     {
-        section: 'Agile & Methodologies',
+        section: 'Software Engineering',
+        items: [
+            { name: 'WordPress & Elementor (Expert)', experience: 8 },
+            { name: 'HTML5 / CSS3 / SASS', experience: 9 },
+            { name: 'JavaScript (ES6+) & React', experience: 4 },
+            { name: 'Next.js 15/16', experience: 2 },
+            { name: 'Git (Advanced)', experience: 4 },
+            { name: 'REST APIs & AJAX', experience: 7 },
+            { name: 'Web Performance (WPO)', experience: 5 },
+            { name: 'PHP & MySQL (Basics)', experience: 3 },
+            { name: 'Deployment & VPS (Linux/CLI)', experience: 5 },
+            { name: 'Shopify & E-commerce O2O', experience: 3 },
+        ]
+    },
+    {
+        section: 'Product Design & R&D',
+        items: [
+            { name: 'Technical Product Design', experience: 10 }, // Мебель + Сувениры
+            { name: 'UX/UI Research & Prototyping', experience: 7 },
+            { name: 'Photoshop (Expert)', experience: 10 },
+            { name: 'Figma', experience: 5 },
+            { name: 'Illustrator & CorelDRAW', experience: 7 },
+            { name: 'Responsive & Material Design', experience: 7 },
+            { name: 'Market & Competitor Analysis', experience: 10 },
+            { name: 'Pre-print & Wide-format Prep', experience: 6 },
+        ]
+    },
+    {
+        section: 'Industrial & Hardware',
+        items: [
+            { name: 'CNC Systems Commissioning', experience: 2 }, // Новый "жирный" скилл
+            { name: 'G-Code & Laser Cutting/Engraving', experience: 3 },
+            { name: '3D Printing (FDM) & Post-processing', experience: 2 },
+            { name: 'CAD/CAM Parametric Modeling', experience: 5 },
+            { name: 'Hardware Troubleshooting', experience: 10 },
+            { name: 'Network Infrastructure (LAN)', experience: 5 },
+            { name: 'Asset Recovery Operations', experience: 5 },
+        ]
+    },
+    {
+        section: 'Specialized Analysis',
+        items: [
+            { name: 'Property & Asset Valuation', experience: 13 },
+            { name: 'Financial Forensic Analysis', experience: 10 },
+            { name: 'Legal Document Automation', experience: 7 },
+            { name: 'Excel Financial Modeling', experience: 13 },
+            { name: 'Audit & Compliance', experience: 10 },
+            { name: 'Risk Assessment', experience: 13 },
+        ]
+    },
+    {
+        section: 'Tools & Methodologies',
         items: [
             { name: 'Agile (Scrum, Kanban)', experience: 11 },
             { name: 'SDLC Implementation', experience: 5 },
-            { name: 'Roadmap & Backlog Management', experience: 9 },
-            { name: 'Change Management', experience: 6 },
-            { name: 'Technical Writing (BRD/PRD)', experience: 8 },
-            { name: 'MVP Development', experience: 5 },
-            { name: 'Jira / Confluence / Monday', experience: 5 },
-        ]
-    },
-    {
-        section: 'Design & Product Research',
-        items: [
-            { name: 'Product Modeling', experience: 10 },
-            { name: 'UX/UI Research & Prototyping', experience: 7 },
-            { name: 'Photoshop (Ps)', experience: 10 },
-            { name: 'Figma', experience: 5 },
-            { name: 'A/B Testing & Hypothesis', experience: 4 },
-            { name: 'Illustrator (Ai)', experience: 7 },
-            { name: 'Responsive Design', experience: 7 },
-            { name: 'Google Material Design', experience: 5 },
-            { name: 'Market & Competitor Analysis', experience: 10 },
-        ]
-    },
-    {
-        section: 'Engineering & Frontend',
-        items: [
-            { name: 'HTML5 / CSS3', experience: 9 },
-            { name: 'SASS / LESS', experience: 5 },
-            { name: 'JavaScript (ES6+)', experience: 4 },
-            { name: 'React & Redux Toolkit', experience: 3 },
-            { name: 'Next.js 15/16', experience: 2 },
-            { name: 'Git (Advanced)', experience: 4 },
-            { name: 'Wordpress / Elementor', experience: 8 },
-            { name: 'Web Performance (WPO)', experience: 5 },
-            { name: 'REST APIs & JSON', experience: 7 },
-            { name: 'Material UI / Ant Design', experience: 2 },
+            { name: 'Jira / Confluence / Monday', experience: 6 },
+            { name: 'Google Workspace (Admin)', experience: 10 },
+            { name: 'Notion / Miro / Asana', experience: 5 },
+            { name: 'SEO Strategy', experience: 3 },
+            { name: 'AI Prompt Engineering', experience: 2 },
         ]
     },
     {
         section: 'Soft Skills & Leadership',
         items: [
-            { name: 'Mentoring & Coaching', experience: 4 },
-            { name: 'Problem Solving', experience: 10 },
-            { name: 'Adaptability', experience: 10 },
-            { name: 'Customer Service Excellence', experience: 8 },
-            { name: 'Time Management', experience: 8 },
+            { name: 'Problem Solving (Crisis focus)', experience: 10 },
+            { name: 'Adaptability & Self-Study', experience: 10 },
+            { name: 'Mentoring & Coaching', experience: 5 },
             { name: 'Cross-functional Collaboration', experience: 10 },
-            { name: 'Public Speaking & Presentation', experience: 5 },
+            { name: 'Customer Service Excellence', experience: 8 },
+            { name: 'Public Speaking', experience: 5 },
         ]
     }
 ];
-
-
 export const education: Education[] = [
     {
         name: `Mykhailo Tuhan-Baranovskyi Donetsk National University of Economics and Trade`,
         specialization: `Accounting and Auditing`,
-        qualification: `Accounting and Auditing professional`,
+        qualification: `Accounting and Auditing Professional`,
         startDate: 2006,
         endDate: 2009,
         additional: false,
         link: null,
         description: [
-            'The Accounting and Auditing specialization focuses on financial reporting, accounting principles, and audit procedures within organizations. Professionals in this field play a critical role in maintaining accurate financial records, ensuring compliance with accounting standards and regulations, and conducting thorough examinations of financial statements to assess their accuracy and integrity.',
-            'A specialization in Accounting and Auditing is essential for individuals pursuing careers as accountants, auditors, financial analysts, or financial managers. It is a critical function that contributes to the financial transparency and accountability of businesses and organizations.'
+            'Deep academic foundation in financial engineering, forensic accounting, and audit-grade documentation. This training formed the basis for my precision-oriented approach to data integrity in both financial and technical systems.',
+            'Mastered complex reporting structures and regulatory compliance, which later enabled me to manage high-stakes financial auditing and asset valuation for multi-million dollar portfolios.'
         ]
     },
     {
@@ -174,150 +192,430 @@ export const education: Education[] = [
         additional: false,
         link: null,
         description: [
-            'The Finance and Credit specialization focuses on financial management, credit analysis, and financial operations within various organizations. Professionals in this field play a crucial role in optimizing financial resources, evaluating creditworthiness, and facilitating financial transactions.',
-            'A specialization in Finance and Credit is valuable for individuals pursuing careers as financial analysts, credit analysts, investment bankers, financial planners, or finance managers. It is a dynamic field that contributes to effective financial management and responsible credit practices.'
+            'Analytical training focused on credit risk assessment, resource optimization, and corporate financial operations. Developed the core mathematical models used for creditworthiness evaluation during my banking tenure.'
         ]
     },
     {
-        name: `State Property Fund of Ukraine, Ukrainian Society of Appraisers`,
-        specialization: null,
-        qualification: `Accredited Property & Property rights Appraiser`,
+        name: `State Property Fund of Ukraine`,
+        specialization: `International Valuation Standards (IVS)`,
+        qualification: `Accredited Property & Property Rights Appraiser`,
         startDate: 2012,
         endDate: 2012,
         additional: true,
         link: null,
         description: [
-            'The specialization in Property, Property Rights, and Business Valuation focuses on evaluating the worth of assets, property rights, and businesses in accordance with established standards and regulations. Professionals in this field play a critical role in providing accurate and unbiased valuations for various purposes, including real estate transactions, legal disputes, taxation, financial planning, mergers and acquisitions, and more.',
-            'A specialization in Property, Property Rights, and Business Valuation is essential for individuals pursuing careers in asset appraisal, property rights assessment, business valuation, and related fields. These experts ensure that assets and businesses are evaluated accurately and fairly, facilitating informed decision-making across a spectrum of industries and scenarios.'
+            'Professional state certification for the valuation of tangible and intangible assets, including intellectual property and business goodwill. Trained to provide bulletproof expert opinions for legal disputes, M&A, and high-level financial planning.'
         ]
     },
     {
         name: `Ministry of Justice of Ukraine`,
-        specialization: null,
-        qualification: `Arbitration Manager (property manager, managing of readjustment, liquidation).`,
+        specialization: `Crisis Management & Restructuring`,
+        qualification: `Arbitration Manager (Liquidator, Restructuring Lead)`,
         startDate: 2014,
         endDate: 2017,
         additional: true,
         link: null,
         description: [
-            'The specialization in Arbitration Management encompasses roles such as Property Manager, Manager of Readjustment, and Liquidator. Professionals in this field are responsible for overseeing complex processes related to property disputes, asset reallocation, and the orderly dissolution of assets and liabilities.',
-            'A specialization as an Arbitration Manager, Property Manager, Manager of Readjustment, or Liquidator is crucial for individuals entrusted with the management and resolution of complex property and asset-related matters. These professionals ensure the fair and equitable resolution of disputes and the efficient management of assets and liabilities in various contexts.'
+            'Advanced legal and operational training for managing distressed enterprises and terminal-stage corporate liquidations. Specialized in asset recovery, labor dispute resolution, and navigating high-pressure regulatory environments under court mandates.'
         ]
     },
     {
         name: `GoIT Ukraine`,
-        specialization: 'Frontend',
-        qualification: `Frontend developer`,
+        specialization: 'Frontend Engineering',
+        qualification: `Frontend Developer`,
         startDate: 2016,
         endDate: 2016,
         additional: true,
         link: null,
         description: [
-            'The role of a Frontend developer involves crafting the user interface of web applications and websites. Frontend developers are responsible for creating interactive and responsive user interfaces that prioritize user experience and ease of navigation. They work closely with design teams and collaborate on turning visual designs into functional web pages, ensuring cross-browser compatibility and optimal performance. Frontend developers are skilled in HTML, CSS, and JavaScript, and they often utilize frontend frameworks and libraries to streamline development and enhance the interactivity of web interfaces. This role plays a crucial part in delivering visually appealing and user-friendly digital experiences to end-users.',
+            'Intensive immersive program focused on modern JavaScript ecosystems, responsive web architecture, and UI/UX best practices. This was the pivotal transition point from financial management to full-stack engineering.'
         ]
     },
     {
         name: `FreeCodeCamp`,
-        specialization: 'Frontend',
+        specialization: 'Algorithmic Thinking',
         qualification: 'JavaScript Algorithms and Data Structures',
         startDate: 2022,
         endDate: 2022,
         additional: true,
         link: 'https://www.freecodecamp.org/certification/artem.skachko/javascript-algorithms-and-data-structures',
         description: [
-            '300 hours of work (the course was completed twice for fun and for update reasons)',
+            'Comprehensive validation of algorithmic logic and data structure implementation. Completed 600+ hours of advanced challenges to benchmark technical skills against global industry standards.',
         ]
     },
     {
         name: `FreeCodeCamp`,
-        specialization: 'Frontend',
+        specialization: 'Modern UI Architecture',
         qualification: 'Legacy Responsive Web Design V8',
         startDate: 2022,
         endDate: 2022,
         additional: true,
         link: 'https://www.freecodecamp.org/certification/artem.skachko/responsive-web-design',
         description: [
-            `300 hours of work (the course was completed twice for fun and for update reasons)`,
+            `In-depth study of accessible, mobile-first design systems and cross-browser compatibility. Focused on optimizing user experiences for diverse device ecosystems.`,
         ]
     },
     {
         name: `GeekBrains`,
-        specialization: 'Frontend',
-        qualification: 'Introduction to Programming',
+        specialization: 'Engineering Fundamentals',
+        qualification: 'Programming & Web Design Foundations',
         startDate: 2020,
         endDate: 2020,
         additional: true,
         link: 'https://gb.ru/certificates/775568.en',
         description: [
-            `The course was completed for fun, to test knowledge and improve your own training program`,
-        ]
-    },
-    {
-        name: `GeekBrains`,
-        specialization: 'Frontend',
-        qualification: 'Programming basics. Beginner',
-        startDate: 2020,
-        endDate: 2020,
-        additional: true,
-        link: null,
-        description: [
-            `The course was completed for fun, to test knowledge and improve your own training program`,
-        ]
-    },
-    {
-        name: `GeekBrains`,
-        specialization: 'Design',
-        qualification: 'Introduction to Web Design',
-        startDate: 2020,
-        endDate: 2020,
-        additional: true,
-        link: null,
-        description: [
-            `The course was completed for fun, to test knowledge and improve your own training program`,
+            `Systematic knowledge audit and training methodology research. Used to standardize internal educational programs for the Remote Helpers engineering department.`,
         ]
     },
     {
         name: `Google`,
         specialization: 'Project Management',
-        qualification: 'Google Project Management',
+        qualification: 'Google Project Management Professional Certificate',
         startDate: 2025,
         endDate: 2025,
         additional: true,
         link: 'https://www.coursera.org/account/accomplishments/professional-cert/certificate/EYCQ4WGAX0PJ',
         description: [
-            `Online Professional Certificate`,
+            `Professional-grade certification covering Agile, Waterfall, and Lean methodologies. Validated expertise in managing complex project lifecycles, stakeholder relations, and high-impact business deliverables in a global environment.`,
         ]
     },
 
 ];
-
 export const experience: Experience[] = [
     {
-        startDate: 2003,
-        endDate: 2006,
-        companyName: `Commodity Exchange "Donetsk Universal Commodity Exchange"`,
+        startDate: 2019,
+        endDate: 2025,
+        companyName: `'Remote Helpers'`,
         country: 'Ukraine',
-        position: `computing center technician`,
+        position: `Administrative & Project Manager`,
         description: {
             summary: [
-                'I am an adept Computing Center Technician with a comprehensive skill set encompassing the maintenance and technical support of servers, workstations, network equipment, and data systems. My responsibilities extend to digitizing, processing, and updating extensive datasets while ensuring the seamless and secure operation of critical infrastructure.',
-                'My expertise includes monitoring server and network equipment performance, promptly addressing technical issues, and managing software updates to guarantee optimal functionality. I prioritize data security through regular backups and strict adherence to established data security standards.',
-                'Collaboration is at the core of my approach, as I work closely with a dedicated team to maintain the uninterrupted operation of the computing center. Furthermore, I provide crucial user support and technical assistance to facilitate efficient operations.',
-                'As a Computing Center Technician, I combine technical proficiency with a commitment to maintaining the reliability and security of essential computing resources, making me an asset to any organization.'
+                'Joined as the first dedicated manager when the company lacked even a basic web presence. Over 6 years, transformed a chaotic startup into a structured outstaffing powerhouse, scaling the team from 70 to 300+ employees.',
+                'Built the entire digital infrastructure from scratch, including branding, corporate websites, and a custom internal CRM/ERP system. Acted as a "Bridge Expert," combining roles of Lead Designer, Full-stack Developer, and Delivery Manager to ensure project success for international clients in E-commerce, FinTech, and SMB sectors.',
+                'Strategically optimized the talent-to-market pipeline, significantly reducing the bench time and increasing the company’s overall profitability.'
             ],
             responsibilities: [
-                'Maintenance and technical support of servers and workstations for data exchange',
-                'Maintenance and technical support of network equipment and internal networks',
-                'Digitization, processing, and updating of large datasets',
-                'Monitoring and ensuring the reliable operation of servers and network equipment',
-                'Troubleshooting and resolving issues on servers and workstations',
-                'Managing and updating software on computers and servers',
-                'Regular data backups and ensuring data security',
-                'Adherence to data security standards and procedures',
-                'Collaboration with team members to ensure the continuous operation of the computing center',
-                'Providing user support and addressing their technical inquiries'
+                'Directly managed Design and Development departments (40-50 subordinates), overseeing delivery for mobile and web projects.',
+                'Conceptualized and led the development of a proprietary web application for talent auditing, automated interviewing, and outstaffing management.',
+                'Scaled organizational headcount by 320% (from 70 to 300 employees) through optimized HR policies and operational workflows.',
+                'Acted as a Technical Consultant for high-ticket external projects, ensuring seamless integration of our outstaffed specialists into client teams.',
+                'Successfully managed "Shadow Leadership" initiatives, mentoring junior developers while maintaining high-level stakeholder relations as the primary point of contact.',
+                'Orchestrated internal SEO and Content strategies, establishing the company’s authority in the global outstaffing market.'            ],
+            goals: [
+                'Reduce talent onboarding time by 75%',
+                'Implement full-cycle internal audit system',
+                'Automate 50% of routine administrative tasks via custom CRM'
             ],
-            goals: []
+            // ATS-ОПТИМИЗИРОВАННЫЙ БЛОК
+            atsSummary: 'Strategic Project & Operations Manager with a proven track record of scaling an outstaffing firm from 70 to 300+ staff. Expert in SDLC management, internal CRM development, and cross-functional leadership of Dev & Design teams (50+ reports). Reduced talent-to-market cycle from 30 days to 10 days.',
+            atsResponsibilities: [
+                'Scaled company headcount by 300%+ and optimized resource allocation, reducing talent onboarding and "time-to-sell" by 75% (from 4 weeks to 1-2 weeks).',
+                'Led the design and engineering of a custom Web App for recruitment and talent auditing, resulting in zero-cost internal HR management.',
+                'Managed 50+ direct reports across Design and Engineering departments, ensuring 95%+ client satisfaction rate on outstaffed projects.',
+                'Saved approximately 2-3 weeks of billable time per new specialist by streamlining technical training and pre-sale preparation processes.',
+                'Provided expert-level consultancy in UI/UX and Frontend architecture for external clients, bridging the gap between business requirements and technical execution.'
+            ]
+        }
+    },
+    {
+        startDate: 2017,
+        endDate: 2024,
+        companyName: `Independent Professional Activity`,
+        country: 'Ukraine',
+        position: `Strategic Crisis Manager (Bankruptcy & Restructuring)`,
+        description: {
+            summary: [
+                'Court-appointed expert for high-stakes bankruptcy proceedings of state-owned and municipal enterprises. Managed a portfolio of 6 distressed entities (3 directly, 3 as a strategic mentor) with total assets valued at ~40M UAH ($1.9M at the time).',
+                'Operated as a "Final Stage" Crisis Manager, entering companies in terminal financial states to ensure orderly liquidation, asset protection, and legal compliance. Navigated extremely high-pressure environments involving state tax authorities, pension funds, and hundreds of employees with unpaid wages.',
+                'Successfully bridged the gap between rigid legal requirements and operational efficiency by designing custom automation tools for large-scale legal documentation and asset tracking.'
+            ],
+            responsibilities: [
+                'Orchestrated full-cycle liquidation processes for municipal enterprises, ensuring 100% compliance with Ministry of Justice regulations and court mandates.',
+                'Managed complex asset disposal workflows: from expert valuation and public auction organization to selecting exchanges and managing competitive bidding.',
+                'Mediated high-conflict stakeholder relations, representing the bankruptcy estate in negotiations with state authorities and labor unions.',
+                'Conducted comprehensive audits of "seized and distressed" assets, preventing further dissipation and ensuring maximum recovery for creditors.',
+                'Acted as a Mentor and Lead Assistant for junior administrators, overseeing the strategic direction of 3 additional liquidation cases.'
+            ],
+            goals: [
+                'Ensure 100% procedural integrity in high-scrutiny state audits',
+                'Automate 80% of routine legal document generation',
+                'Optimize administrative costs through DIY operational solutions'
+            ],
+            atsSummary: 'Strategic Operations & Crisis Manager with 7 years of experience managing the restructuring and liquidation of distressed state-owned enterprises. Expert in navigating high-conflict stakeholder environments, regulatory compliance (Ministry of Justice), and asset valuation (~40M UAH portfolio). Proven ability to automate complex legal reporting using technical tools.',
+            atsResponsibilities: [
+                'Directly managed the liquidation and asset recovery of 6 corporate entities, overseeing high-value municipal asset portfolios (approx. 40M UAH).',
+                'Negotiated debt settlements and navigated complex regulatory landscapes with State Tax Authorities, Pension Funds, and municipal stakeholders.',
+                'Managed end-to-end asset disposal: from court-ordered valuation to organizing public auctions and investor competitions under strict Ministry of Justice rules.',
+                'Developed custom automated systems (Excel/Scripts) for variable-based legal template generation, reducing administrative overhead and ensuring 100% data accuracy.',
+                'Resolved large-scale labor disputes and managed payroll settlements for hundreds of employees in distressed municipal environments.'
+            ]
+        }
+    },
+    {
+        companyName: `'MIS' LLC`,
+        startDate: 2012,
+        endDate: 2025,
+        country: 'Ukraine',
+        position: `Lead Strategic Consultant (Valuation & Finance)`,
+        description: {
+            summary: [
+                '13-year tenure as a Lead Strategic Consultant for high-stakes asset valuation and financial forensic analysis. Engaged on a project basis to manage portfolios valued at hundreds of millions (book value), specializing in complex, distressed, and restricted assets (seized property, state-owned entities, and collateral).',
+                'Expert in evaluating intangible assets, including patents, rights of claim, and goodwill. Bridged the gap between raw economic data and legal certainty, ensuring that every valuation model survived intense scrutiny from courts, prosecutors, and state authorities.',
+                'Acted as a recurring Strategic Advisor and Peer Reviewer, providing expert opinions on "valuation-at-risk" scenarios and auditing the work of other appraisers to ensure industry-leading quality standards.'
+            ],
+            responsibilities: [
+                'Engineered sophisticated "kilometer-long" financial models in Excel to calculate physical, functional, and economic obsolescence with 100% data traceability for diverse projects.',
+                'Developed custom web crawlers to automate the collection and verification of market data, ensuring real-time relevance for high-stakes legal reports and consultations.',
+                'Led the project-based valuation of diverse asset classes: from heavy machinery and real estate to complex financial instruments and intellectual property.',
+                'Provided forensic-level documentation and expert testimony for court proceedings, insurance claims, and multi-million dollar loan collateralization.',
+                'Conducted peer reviews and strategic consultations, optimizing valuation methodologies for fellow liquidators and government stakeholders.'
+            ],
+            goals: [
+                'Maintain zero-rejection rate in court and prosecutor audits',
+                'Automate 70% of market data collection via custom scrapers',
+                'Develop a standardized framework for intangible asset valuation'
+            ],
+            // ATS-ОПТИМИЗИРОВАННЫЙ БЛОК
+            atsSummary: 'Strategic Valuation Consultant & Financial Engineer with 13 years of project-based experience in asset appraisal and forensic analysis. Expert in Intangible Assets (Patents, Goodwill) and Distressed Asset Recovery. Proven track record in building complex automated valuation models and ensuring 100% data integrity for legal and government audits.',
+            atsResponsibilities: [
+                'Orchestrated project-based valuation processes for asset portfolios worth hundreds of millions, specializing in complex distressed properties and state-owned enterprises.',
+                'Engineered automated multi-factor depreciation models (Physical, Functional, Economic), leveraging advanced Excel functions and custom scripts for individual cases.',
+                'Developed automated data-gathering tools (crawlers) to source verified market benchmarks, ensuring bulletproof evidence for judicial and regulatory scrutiny.',
+                'Evaluated intangible assets including Intellectual Property, Goodwills, and Rights of Claim for M&A and restructuring purposes as an external expert.',
+                'Performed professional peer reviews (Recensing) for high-profile valuation reports, acting as a Quality Assurance lead for the regional valuation market.'
+            ]
+        }
+    },
+    {
+        companyName: `NEVVON CARE INC`,
+        startDate: '2021',
+        endDate: '2021',
+        country: 'Canada / Remote',
+        position: `Web Developer & UI Designer`,
+        description: {
+            summary: [
+                'Revitalized the digital presence for a Canadian healthcare service provider by migrating a legacy informational resource to a modern, high-performance CMS infrastructure. Focused on creating a "Medical Minimalism" visual style to establish trust and professional authority.',
+                'Implemented a client-centric development approach: instead of creating a rigid system, I built a flexible web platform using a visual engine that empowered the client’s team to manage complex content independently, eliminating the need for constant technical intervention.',
+                'Managed the end-to-end deployment lifecycle, from domain and hosting orchestration to automated security and backup protocols.'
+            ],
+            responsibilities: [
+                'Architected the complete web infrastructure from scratch, including hosting setup, DNS configuration, and CMS deployment.',
+                'Designed a "Medical Minimalism" UI kit and implemented it into a responsive web platform, ensuring cross-device compatibility and high user trust.',
+                'Developed a modular content system that reduced the time-to-publish for medical articles and resources by 100% through a visual-builder interface.',
+                'Configured automated backup and security systems, ensuring 99.9% uptime and data integrity for the corporate resource.',
+                'Provided comprehensive training and documentation to the client’s staff, enabling autonomous platform management.'            ],
+            goals: [
+                'Modernize a legacy medical information portal',
+                'Eliminate client dependency on developers for daily content updates',
+                'Establish a clean, modern brand identity'
+            ],
+            atsSummary: 'Web Systems Developer & Designer specialized in building autonomous corporate platforms for the Healthcare sector. Expert in WordPress architecture, UI/UX design, and operational workflow optimization. Proven ability to deliver end-to-end web solutions that reduce maintenance costs and empower non-technical teams.',
+            atsResponsibilities: [
+                'Led the full-cycle migration and redevelopment of a corporate web platform, optimizing performance and server response times.',
+                'Streamlined content operations by implementing a modular visual editing system, saving the client hundreds of billable hours in long-term maintenance.',
+                'Designed and executed a modern "Medical Minimalist" UI, enhancing brand perception and user engagement metrics.',
+                'Established automated DevOps-lite workflows, including server-side backups, security hardening, and performance caching.',
+                'Consulted on digital infrastructure strategy, managing domain migration, SSL implementation, and hosting architecture.'
+            ]
+        }
+    },
+    {
+        companyName: `'Dino - tech solutions'`,
+        startDate: 2020,
+        endDate: 2021,
+        country: 'Canada / Israel / Remote',
+        position: `Web Systems Engineer & Frontend developer`,
+        description: {
+            summary: [
+                'Architected and managed high-traffic web ecosystems for premier international clients, including the official Israeli tourism portal (israel.travel). Engineered bespoke WordPress solutions using clean, native PHP following the WordPress Codex standards for maximum performance and security.',
+                'Executed a large-scale infrastructure migration involving 80+ unique WordPress instances. Successfully managed the transition of legacy systems to modern server environments, resolving complex compatibility issues and ensuring data integrity for media libraries exceeding 60GB.',
+                'Strategically transitioned the tech stack toward modern frontend frameworks, integrating React and Vue into production workflows while maintaining a lean, high-velocity development team of 10+ professionals.'            ],
+            responsibilities: [
+                'Directed the migration and infrastructure overhaul of 80+ diverse web projects, managing full-cycle updates, debugging, and performance tuning.',
+                'Developed high-performance, custom-coded WordPress themes and plugins using native PHP and the WordPress Codex, ensuring zero reliance on heavy page builders.',
+                'Collaborated with a cross-functional team of 10 to deliver digital products for the Israeli and Canadian markets, bridging the gap between sales requirements and technical execution.',
+                'Optimized large-scale media assets and database structures for enterprise sites, significantly improving server response times and storage efficiency.',
+                'Pioneered the adoption of React and Vue within the agency’s development pipeline, enhancing the interactivity and scalability of client web applications.'            ],
+            goals: [
+                'Execute 80+ site migrations with zero downtime',
+                'Modernize legacy codebases to the latest PHP/WP standards',
+                'Streamline media management for 60GB+ databases'
+            ],
+            atsSummary: 'Web Systems Engineer with expertise in Enterprise-level WordPress migrations and performance optimization. Proven track record in managing 80+ unique web instances and supporting high-traffic portals like israel.travel. Expert in Clean PHP (Wordpress Codex), React, and large-scale data integrity management.',
+            atsResponsibilities: [
+                'Orchestrated the successful migration of 80+ WordPress websites to new server infrastructures, ensuring 100% uptime and resolving critical version-update conflicts.',
+                'Managed high-traffic web assets for the official Israel Tourism portal (israel.travel), focusing on scalability and security hardening.',
+                'Developed bespoke, performance-optimized themes using native PHP (Wordpress Codex), reducing technical debt and improving Core Web Vitals.',
+                'Optimized large-scale media storage systems (60GB+ per instance), implementing efficient asset-loading strategies and database cleanup protocols.',
+                'Led the technical transition from legacy jQuery/PHP environments to modern React/Vue frontend architectures.'
+            ]
+        }
+    },
+    {
+        companyName: `SyncSpider`,
+        startDate: '2023',
+        endDate: '2023',
+        country: 'Austria / Remote',
+        position: `Web Systems Developer & Design Consultant`,
+        description: {
+            summary: [
+                'Architected and developed the public web ecosystem for a leading European iPaaS platform, including the central marketing site, comprehensive Knowledge Base, and technical documentation portal.',
+                'Acted as a Technical Consultant for the design team, conducting feasibility audits to ensure that UI/UX concepts remained performant and alignable with web standards. Bridged the gap between high-level Product Owner visions and practical frontend execution.',
+                'Engineered a scalable information architecture for a data-heavy SaaS environment, focusing on content discoverability and seamless user onboarding through well-structured documentation interfaces.'],
+            responsibilities: [
+                'Developed a high-performance documentation and Knowledge Base platform from scratch, optimizing it for SEO and technical content accessibility.',
+                'Collaborated directly with the Product Owner to translate roadmap objectives into functional, user-centric web interfaces.',
+                'Provided expert-level feedback on the corporate Design System, identifying and resolving technical constraints early in the design phase.',
+                'Built a library of modular, reusable UI components that accelerated content production for 500+ integration and documentation pages.',
+                'Managed end-to-end web deployment and performance tuning, ensuring 90+ scores on Google PageSpeed Insights for critical landing pages.'            ],
+            goals: [
+                'Launch an enterprise-grade Knowledge Base for iPaaS users',
+                'Establish a technical bridge between Design and Development teams',
+                'Maximize SEO visibility for the integration directory'
+            ],
+            atsSummary: 'Web Systems Developer & Technical Design Consultant for the SaaS/iPaaS sector. Expert in building Knowledge Bases, technical documentation portals, and high-performance marketing sites. Proven track record in collaborating with Product Owners and optimizing Design Systems for technical feasibility and scalability.',
+            atsResponsibilities: [
+                'Architected and developed the primary Knowledge Base and technical documentation portal for a leading European iPaaS platform, improving user self-service capabilities.',
+                'Consulted the design team on technical feasibility (Design Feasibility Audit), ensuring UI components were optimized for web performance and cross-browser compatibility.',
+                'Streamlined the product-to-market workflow by collaborating directly with the Product Owner to implement high-impact frontend features.',
+                'Developed a modular frontend framework for massive content scaling, enabling the efficient management of hundreds of integration-specific web pages.',
+                'Optimized Core Web Vitals and site architecture, resulting in enhanced search engine rankings and improved user onboarding experiences.'
+            ]
+        }
+    },
+    {
+        companyName: `Logoletta GmbH`,
+        startDate: '2023',
+        endDate: '2023',
+        country: 'UK / Germany / Remote',
+        position: `Digital Solutions Lead & Frontend Developer`,
+        description: {
+            summary: [
+                'Brought in as a "Crisis Turnaround" specialist to rescue a high-stakes landing page project after a previous developer failure. Successfully met aggressive deadlines, transforming a legacy "2000s-style" web presence into a cutting-edge, pixel-perfect digital experience.',
+                'Engineered a complex multi-directional scrolling architecture (Vertical-Horizontal-Vertical), ensuring seamless alignment and high-performance animations. Focused on bridging advanced design requirements with technical stability under extreme time pressure.',
+                'Established a long-term operational framework for the client by authoring comprehensive technical documentation and video-based training modules, ensuring autonomous platform management for the business owner.'            ],
+            responsibilities: [
+                'Rescued and delivered a mission-critical web project under a "burning deadline," replacing failed legacy code with a robust, custom-built WordPress architecture.',
+                'Developed a high-complexity user interface featuring pixel-perfect horizontal scrolling, flipping cards, and dynamic custom fields.',
+                'Designed and implemented a modern visual identity, replacing an outdated web structure with a clean, high-conversion minimalist aesthetic.',
+                'Authored a bespoke "Digital Handover" package, including video tutorials and written guides for the business owner and their assistant.',
+                'Managed end-to-end technical execution: from DNS and server orchestration to final performance optimization and cross-browser testing.'            ],
+            goals: [
+                'Deliver a high-fidelity landing page within a critical 1-week window',
+                'Implement a flawless multi-directional scroll UI',
+                'Eliminate client downtime through rapid deployment'
+            ],
+            atsSummary: 'Digital Solutions Lead with a focus on Frontend Engineering and Crisis Management. Proven ability to deliver complex, high-performance web projects under extreme deadlines. Expert in bespoke WordPress development, pixel-perfect UI implementation (Horizontal Scroll/Animations), and stakeholder technical onboarding.',
+            atsResponsibilities: [
+                'Rescued a high-priority web development project with burning deadlines, delivering a complete pixel-perfect rebuild that exceeded client expectations.',
+                'Engineered advanced scrolling mechanics (Multi-directional scroll) and interactive UI components (Flipping cards/Custom logic) using clean, optimized code.',
+                'Automated the client onboarding process by creating a suite of technical video instructions and manuals, reducing post-launch support needs.',
+                'Optimized digital infrastructure, including server configuration and performance hardening, resulting in a 100% stable and fast web experience.',
+                'Acted as a Strategic Technical Consultant, advising the business owner on technical feasibility and long-term digital growth strategies.'
+            ]
+        }
+    },
+    {
+        companyName: `Displayed Web`,
+        startDate: '2022',
+        endDate: '2022',
+        country: 'Sweden / Remote',
+        position: `Rapid Deployment Specialist & Frontend Developer`,
+        description: {
+            summary: [
+                'Architected a high-velocity web production workflow for a Swedish digital agency, specializing in the rapid delivery of high-conversion business websites. Established a record-breaking delivery standard of up to 3 production-ready sites per day.',
+                'Bridged the gap between aggressive business timelines and technical execution by leveraging the WordPress ecosystem and modular design components. Focused on "speed-to-market" as a primary value proposition for Small and Medium-sized Businesses (SMBs).',
+                'Implemented a minimalist, results-driven UI/UX strategy, ensuring that rapid deployment never compromised professional aesthetics or cross-device performance.'            ],
+            responsibilities: [
+                'Executed end-to-end web deployment for multiple SMB clients within 24-48 hour windows, managing everything from initial setup to final launch.',
+                'Optimized and customized advanced WordPress architectures (Elementor/Theme Forest), ensuring peak performance and SEO-readiness under tight deadlines.',
+                'Integrated various third-party services and lightweight APIs, including search modules, review widgets, and custom data-tracking forms.',
+                'Developed an internal "Rapid Component Library" to streamline the assembly of custom calculators and interactive elements, significantly reducing development time.',
+                'Managed 100% of the technical lifecycle for each project, including domain configuration, hosting orchestration, and automated backup protocols.'
+            ],
+            goals: [
+                'Achieve a consistent 24-hour delivery cycle for core web products',
+                'Maintain a 3-sites-per-day production capacity',
+                'Ensure 100% mobile responsiveness for all rapid-launch projects'
+            ],
+            atsSummary: 'High-Velocity Web Developer & Rapid Deployment Specialist with a focus on the SMB sector. Expert in WordPress (Elementor) ecosystem and modular UI/UX design. Proven track record of delivering 3+ production-ready sites per day while maintaining high standards of performance and SEO.',
+            atsResponsibilities: [
+                'Streamlined web production workflows to achieve a delivery rate of 3 high-fidelity sites per day, significantly increasing agency throughput.',
+                'Delivered end-to-end web solutions for SMB clients within 24-48 hours, including custom integrations (Search APIs, Review Widgets, Gov-data modules).',
+                'Architected responsive, minimalist web interfaces focused on high conversion and optimal user journeys.',
+                'Optimized large-scale template architectures for maximum speed and performance, ensuring sub-2s load times across the portfolio.',
+                'Directed technical project execution, managing domain migrations, server security hardening, and automated data integrity protocols.'
+            ]
+        }
+
+    },
+    {
+        startDate: 2010,
+        endDate: 2011,
+        companyName: `'Foxtrot' OJSC`,
+        country: 'Ukraine',
+        position: `Technical Sales & Product Consultant (Computers & Digital)`,
+        description: {
+            summary: [
+                'Launched professional career at Ukraine’s premier electronics retailer, quickly ascending to a top-tier performer rank by focusing on operational velocity and process innovation. Managed high-volume sales for computing hardware, mobile devices, and digital imaging technology.',
+                'Expertly translated complex technical specifications into consumer value, consistently exceeding revenue targets for high-margin service agreements (warranties, insurance) and custom post-sale technical support. Acted as a bridge between technical hardware capabilities and diverse user requirements.',
+                'Optimized local inventory and visual merchandising strategies, identifying accounting discrepancies and strategically positioning promotional assets to maximize department sell-through rates.'
+            ],
+            responsibilities: [
+                'Ranked in the top tier of the sales department for high-velocity transaction handling and innovative approach to customer engagement.',
+                'Executed advanced hardware and software deployments, including OS installation, disk partitioning, and custom software provisioning tailored to specific client professional needs.',
+                'Negotiated high-margin service contracts and extended warranties, leveraging deep psychological insights and product knowledge to drive department profitability.',
+                'Optimized warehouse accounting and inventory visibility, identifying critical data errors and redesigning product displays to boost sales of promotional items.',
+                'Mentored and onboarded junior staff on corporate standards, technical troubleshooting protocols, and effective sales methodologies.'            ],
+            goals: [
+                'Consistently exceed monthly sales KPIs for high-ticket digital goods',
+                'Achieve 100% accuracy in inventory registration and stock audits',
+                'Maintain top-rank status in customer satisfaction and technical support quality'
+            ],
+            atsSummary: 'Top-performing Technical Sales Consultant with a foundation in high-volume retail operations (Foxtrot). Expert in hardware/software configuration, customer psychology, and inventory optimization. Proven track record in exceeding sales targets for complex digital goods and managing inventory integrity.',
+            atsResponsibilities: [
+                'Ranked as a top-performing consultant for sales volume and operational speed in the computing and digital assets department.',
+                'Performed advanced software provisioning and OS deployments for a wide range of devices, ensuring high post-sale customer satisfaction.',
+                'Negotiated complex service agreements and high-margin insurance packages, consistently driving incremental department revenue.',
+                'Optimized visual merchandising and inventory logistics, identifying accounting errors and enhancing product visibility for strategic assets.',
+                'Facilitated technical training and onboarding for new employees, ensuring adherence to corporate service and operational standards.'
+            ]
+        }
+
+    },
+    {
+        companyName: `Eurostandart - furniture factory`,
+        startDate: '2016',
+        endDate: '2017',
+        country: 'Ukraine',
+        position: `Digital Product Manager & Lead Technical Designer`,
+        description: {
+            summary: [
+                'Architected and single-handedly executed the digital transformation of a furniture manufacturing facility. Developed a full-cycle E-commerce ecosystem on OpenCart, acting as the sole Project Manager, Designer, and Developer, which directly catalyzed the opening of two new physical retail locations and a production expansion.',
+                'Bridged the gap between industrial engineering and aesthetics by providing R&D consultancy on ergonomics, material selection, and structural integrity for serial production (100+ SKUs). Managed the end-to-end technical production pipeline, from vector-based CNC/Plotter preparation to final assembly handover.',
+                'Spearheaded the branding and visual identity for a successful commercial furniture subsidiary, managing the entire suite of POS, outdoor advertising, and corporate marketing assets.'            ],
+            responsibilities: [
+                'Directly engineered and launched an OpenCart-based e-commerce platform, managing the entire SDLC, database architecture, and UI/UX design.',
+                'Consulted the engineering department on furniture R&D, influencing the ergonomic and structural design of upholstered and case furniture collections.',
+                'Managed high-precision industrial plotter operations and technical file preparation for sandblasting and wide-format facade printing.',
+                'Orchestrated the visual launch of a subsidiary brand for commercial furniture, delivering comprehensive brand guidelines and multi-channel marketing materials.',
+                'Streamlined the production-to-sales workflow by creating an interactive digital catalog that reduced time-to-conversion for B2B and B2C clients.',
+                'Produced high-fidelity marketing collateral, including physical catalogs, outdoor banners, and point-of-sale displays to unify the brand voice.'
+            ],
+            goals: [
+                'Scale digital sales to support the expansion of physical retail chains',
+                'Integrate industrial design standards into the digital product presentation',
+                'Establish 100% brand consistency for the parent company and its commercial subsidiary'
+            ],
+            atsSummary: 'Digital Product Manager & Industrial Designer with a proven record of scaling manufacturing businesses through E-commerce (OpenCart). Expert in bridging industrial R&D with digital sales channels. Proven ability to manage full-cycle product launches, from UI/UX and brand identity to CNC-ready technical documentation.',
+            atsResponsibilities: [
+                'Architected and deployed a full-cycle OpenCart E-commerce platform, resulting in the expansion of production capacity and the opening of 2 new retail stores.',
+                'Collaborated with the engineering team on Product R&D, optimizing ergonomics and material specifications for a catalog of 100+ furniture items.',
+                'Managed industrial production workflows, including plotter cutting and technical vector preparation for complex decorative processes.',
+                'Led the visual and strategic branding for a commercial furniture spinoff company, managing all corporate identity and POS materials.',
+                'Optimized B2B sales cycles by implementing a centralized digital catalog and automated product documentation systems.',
+                'Directed large-format print production and outdoor advertising campaigns to support regional business growth.'
+            ]
         }
     },
     {
@@ -325,52 +623,34 @@ export const experience: Experience[] = [
         endDate: 2009,
         companyName: `'Privat Bank' OJSC`,
         country: 'Ukraine',
-        position: `Expert of the direction "Car on credit"`,
+        position: `Credit Risk & Loan Operations Expert`,
         description: {
             summary: [
-                'I am a seasoned Expert specializing in the domain of "Car on Credit," where my primary focus is to navigate the intricate landscape of lending regulations and compliance. My role demands an unwavering commitment to maintaining up-to-date knowledge of lending laws to ensure adherence and mitigate risk effectively.',
-                'In addition to compliance, I excel in the meticulous organization and management of client records, prioritizing accuracy and the utmost confidentiality of loan-related documentation. I am dedicated to facilitating a smooth and efficient loan application process, providing expert guidance to borrowers every step of the way.',
-                'My proficiency extends to conducting comprehensive credit report analyses, evaluating applicants\' financial stability, and assessing eligibility criteria based on income, assets, and liabilities. Furthermore, I possess a keen eye for evaluating creditworthiness, leveraging my skills to make informed lending decisions.',
-                'In challenging situations involving delinquent loans, I employ my negotiation skills to establish favorable repayment terms, all while minimizing potential losses. My commitment to evaluating credit risk and applications ensures strict compliance with established policies and procedures.',
-                'As an Expert in the "Car on Credit" field, I am dedicated to upholding the highest standards of compliance and client satisfaction, ultimately contributing to the success and reliability of our lending operations.',
+                'Managed high-volume automotive lending operations during the 2008 economic transition, overseeing dozens of credit deals per branch monthly. Specialized in deep-level financial verification and collateral risk assessment during the onset of the global financial crisis.',
+                'Excelled in fraud detection, identifying sophisticated attempts at identity theft and falsified financial documentation (income statements, expired passports). Operated within early, complex Linux-based banking infrastructures, maintaining data integrity across raw software environments.',
+                'Executed "high-stakes" field operations in collaboration with the Bank Security Department to verify collateral status and negotiate debt recovery for non-performing loans.'
             ],
             responsibilities: [
-                'Maintained an in-depth knowledge of current lending regulations, ensuring compliance with all applicable laws',
-                'Organized and maintained client records, ensuring accuracy and confidentiality of all loan-related documents',
-                'Assisted borrowers in the loan application process to ensure a smooth and efficient experience',
-                'Analyzed credit reports to determine the financial viability of loan applicants',
-                'Assessed applicant\'s income, assets, and liabilities to determine loan eligibility',
-                'Analyzed financial statements and credit reports to determine creditworthiness of borrowers',
-                'Negotiated repayment terms with customers for delinquent loans to minimize losses',
-                'Evaluated credit risk and loan applications to ensure compliance with established policies and procedures',
+                'Directly managed the end-to-end loan lifecycle for a high-volume "Car on Credit" portfolio, ensuring rapid processing without compromising risk standards.',
+                'Performed rigorous KYC (Know Your Customer) and anti-fraud audits, successfully neutralizing attempts to use invalid or falsified legal documents.',
+                'Collaborated with the Security Department on field inspections and collateral recovery missions, managing high-conflict negotiations with delinquent borrowers.',
+                'Operated and troubleshot early-stage Linux-based banking CRM systems, managing complex registries and financial ledgers with 100% accuracy.',
+                'Analyzed applicant solvency and credit histories to determine risk categories, adjusting loan terms to align with tightening 2008-2009 lending regulations.'
             ],
-            goals: []
+            goals: [
+                'Maintain zero-loss rate on audited high-risk applications',
+                'Achieve 100% accuracy in manual registry management under Linux',
+                'Optimize collateral verification cycle through proactive field monitoring'
+            ],
+            atsSummary: 'Credit Risk & Financial Operations Expert with a background in high-volume lending and asset recovery. Expert in fraud detection (KYC/AML), collateral auditing, and debt negotiation. Proven ability to operate complex financial systems and manage field-level risk mitigation in high-pressure economic environments.',
+            atsResponsibilities: [
+                'Evaluated financial risk and creditworthiness for a high-volume automotive loan portfolio, managing dozens of complex transactions monthly.',
+                'Identified and prevented fraud attempts involving falsified income data and identity documents through meticulous verification protocols.',
+                'Managed field-level asset recovery and collateral audits in high-conflict scenarios, collaborating with internal security and legal teams.',
+                'Utilized early Linux-based banking software to maintain precise financial records and transaction registries during the 2008 crisis.',
+                'Negotiated debt restructuring and repayment terms for distressed accounts, successfully minimizing bank losses and stabilizing portfolio NPL ratios.'
+            ]
         }
-    },
-    {
-        startDate: 2010,
-        endDate: 2011,
-        companyName: `'Foxtrot' OJSC`,
-        country: 'Ukraine',
-        position: `Sales assistant (digital goods & computers)`,
-        description: {
-            summary: [
-                'I am a dedicated Sales Assistant with expertise in digital goods and computers, contributing to the seamless operation of the sales process. My responsibilities encompass the acceptance and organized registration of goods within the warehouse. I excel in the meticulous unpacking, initial setup, and strategic display of products on showcases, ensuring an enticing presentation for potential customers.',
-                'My role extends to being a knowledgeable product consultant, adept at explaining product features and specifications to assist customers in making informed choices. I pride myself on delivering compelling product presentations that captivate and engage prospective buyers. In addition to this, I am proficient in managing the sales registration process to streamline transactions.',
-                'Furthermore, I am committed to providing top-notch post-sales customization support to ensure customer satisfaction. My combined skills in product handling, customer engagement, and sales support make me an invaluable asset in the realm of digital goods and computers sales.',
-                'With a strong customer-centric approach and a passion for delivering exceptional service, I contribute to elevating the sales experience for both clients and the organization.',
-            ],
-            responsibilities: [
-                'Acceptance and warehouse registration of goods.',
-                'Unpacking, initial setup, and display of products on showcases.',
-                'Providing product consultations and explaining its features and specifications.',
-                'Delivering effective product presentations to potential customers.',
-                'Managing the sales registration process.',
-                'Assisting customers with post-sales customization of products.',
-            ],
-            goals: []
-        }
-
     },
     {
         startDate: 2011,
@@ -380,246 +660,29 @@ export const experience: Experience[] = [
         position: `loan officer`,
         description: {
             summary: [
-                'I am a dedicated Loan Officer with a profound commitment to delivering exceptional banking services. My role encompasses advising clients on the full range of financial offerings provided by the bank, assessing their creditworthiness, skillfully crafting loan agreements, and adeptly navigating the complexities of managing challenging debts. I am driven by the goal of empowering clients to achieve their financial dreams through tailored lending solutions.',
-                'In my role as a Loan Officer, I consider myself not just a financial advisor but also a trusted partner in helping clients achieve their financial objectives. I approach each day with a commitment to excellence, a dedication to compliance, and a passion for empowering individuals and businesses through effective lending solutions.',
-            ],
+                'Managed high-traffic Point of Sale (POS) lending operations across major retail networks (electronics, furniture, specialized equipment). Optimized the customer journey in fast-paced environments, processing 10-15 complex credit applications daily.',
+                'Acted as a "Single-Point" Operations Lead for remote retail branches, combining financial advisory with autonomous hardware infrastructure maintenance. Consistently met aggressive KPIs for high-margin cross-sales, including credit insurance and secondary banking products.',
+                'Proactively mitigated credit risk through "Soft Collection" initiatives, maintaining detailed communication registries and identifying potential delinquencies before they reached the legal recovery stage.'            ],
             responsibilities: [
-                'Immerse myself in the intricate world of lending regulations, diligently ensuring compliance with all relevant laws. I stay at the forefront of evolving regulations to safeguard the interests of both clients and the institution.',
-                'Precision is my hallmark as I meticulously organize and safeguard client records, assuring the utmost accuracy and confidentiality of all loan-related documents. Trust and confidentiality are the cornerstones of my work',
-                'I am dedicated to making the loan application process a seamless and efficient experience for borrowers. My guidance and expertise are designed to provide clients with confidence and peace of mind throughout the journey',
-                'Credit reports hold the key to sound lending decisions, and I excel in analyzing them to ascertain the financial viability of loan applicants. This allows me to tailor loan solutions that align with the unique needs and aspirations of each client',
-                'Evaluating an applicant\'s financial landscape is a craft I have mastered. By assessing their income, assets, and liabilities, I can determine loan eligibility and offer tailored solutions that are both responsible and beneficial',
+                'Executed the full lifecycle of consumer lending at high-traffic retail hubs, ensuring rapid data verification and contract finalization under strict deadlines.',
+                'Exceeded mandatory KPIs for cross-selling financial protection packages and secondary credit instruments, driving branch profitability.',
+                'Directed "Soft Collection" workflows: conducted proactive risk-mitigation calls, maintained detailed interaction logs, and prepared analytical reports for the Security Department.',
+                'Managed the technical and operational uptime of remote sales points, including autonomous hardware maintenance (scanners, printers, supplies) and inventory logistics.',
+                'Analyzed individual credit profiles using proprietary Windows-based banking systems to provide tailored financial solutions while maintaining 100% regulatory compliance (KYC).'
             ],
-            goals: []
-        }
-    },
-    {
-        startDate: 2019,
-        endDate: 2025,
-        companyName: `'Remote Helpers'`,
-        country: 'Ukraine',
-        position: `Administrative Manager`,
-        description: {
-            summary: [
-                'In this role, I am an experienced Administrative Manager with a successful track record of optimizing organizational efficiency and fostering collaborative work environments. My expertise lies in developing and implementing effective policies and procedures, nurturing relationships with external partners, enhancing communication channels, and driving successful project outcomes. I am dedicated to Agile methodology, change management, and data-driven decision-making, all of which contribute to my ability to lead and inspire teams to achieve their highest potential.',
+            goals: [
+                'Maintain peak operational uptime for remote POS hardware',
+                'Achieve 100% conversion on mandatory cross-sales targets',
+                'Ensure zero-error rate in high-volume document registries'
             ],
-            responsibilities: [
-                'Developed and managed an organizational structure that allowed for effective resource allocation and delegation of tasks',
-                'Developed and implemented effective policies and procedures for HR, finance, and other administrative functions',
-                'Developed and maintained good working relationships with vendors and contractors, resulting in improved customer service and satisfaction',
-                'Established and maintained effective communication channels with internal and external stakeholders, resulting in improved customer service and satisfaction',
-                'Created and implemented a system for tracking and monitoring project progress and milestones, resulting in timely completion of projects',
-                'Coached and mentored administrative staff, resulting in improved job performance and knowledge',
-                'Led daily stand-up meetings to ensure tasks were completed on time and communicated changes to stakeholders',
-                'Collaborated with the development team to ensure tasks were completed on time and met quality standards',
-                'Identified and resolved conflicts between team members to ensure a successful project delivery',
-                'Mentored and coached project team members to ensure project success',
-                'Analyzed project data and created reports to present to senior management, resulting in improved decision-making',
-                'Implemented a change management process that ensured all changes were documented and communicated to stakeholders',
-                'Utilized Agile methodology and tools to ensure a successful product launch',
-                'Developed a team performance tracking system to improve team accountability and performance'
-            ],
-            goals: []
-        }
-    },
-    {
-        startDate: 2017,
-        endDate: 2024,
-        companyName: `Independent Professional Activity`,
-        country: 'Ukraine',
-        position: `Trustee in Bankruptcy (Arbitration Administrator)`,
-        description: {
-            summary: [
-                'In my role as a Trustee in Bankruptcy, also known as an Arbitration Administrator, I have taken on the critical responsibility of managing and overseeing the complex world of asset arbitration and financial recovery. My expertise centers around safeguarding and effectively administering the assets of entities engaged in arbitration proceedings while ensuring compliance with legal requirements. I excel in managing the sanitation process, aligning it with financial recovery objectives, and, when necessary, efficiently orchestrating asset liquidation to satisfy creditors.',
-                'Adherence to stringent legal regulations and court orders is paramount throughout the arbitration process under my purview. My contribution extends to conducting comprehensive financial assessments and feasibility studies, providing valuable insights that inform strategic decision-making during arbitration and restructuring.',
-                'Furthermore, I prioritize transparent and open communication with all stakeholders, including creditors, legal counsel, and the arbitration tribunal, to ensure that all parties are well-informed and aligned with the goals and progress of the arbitration proceedings. My dedication to maintaining the highest standards of ethics, compliance, and financial stewardship makes me an asset in the role of Trustee in Bankruptcy, consistently working towards equitable and successful outcomes in complex financial scenarios.',
-            ],
-            responsibilities: [
-                'Oversee and administer the assets of entities involved in arbitration, ensuring their protection and proper utilization',
-                'Manage the sanitation (restructuring or reorganization) process, ensuring that it aligns with the goals of financial recovery and compliance with legal requirements',
-                'In cases where liquidation is necessary, act as a liquidator, overseeing the orderly disposition of assets to satisfy creditors',
-                'Ensure strict adherence to legal regulations and compliance with court orders throughout the arbitration process',
-                'Conduct financial assessments and feasibility studies to inform decision-making during arbitration and restructuring',
-                'Maintain transparent communication with stakeholders, including creditors, legal counsel, and the arbitration tribunal',
-            ],
-            goals: []
-        }
-    },
-    {
-        companyName: `'Dino - tech solutions'`,
-        startDate: 2020,
-        endDate: 2021,
-        country: 'Canada/Israel',
-        position: `Frontend developer`,
-        description: {
-            summary: [
-                `I am a highly skilled Front-end Developer with a proven track record in the development, support, and maintenance of web resources. My expertise extends to creating dynamic and user-friendly websites using CMS WordPress, whether by customizing existing templates or crafting themes from scratch. I am well-versed in optimizing and managing large client resources, conducting migrations, implementing data backup solutions, and ensuring robust data recovery processes.`,
-                'My capabilities also encompass the creation of web applications utilizing popular libraries and frameworks to elevate user experiences and functionality. I excel in configuring and maintaining dedicated virtual servers, guaranteeing the reliability and performance of web applications. Additionally, I possess a keen understanding of hosting setup, domain configuration, and server maintenance.',
-                'Collaboration is a cornerstone of my approach, as I work closely with cross-functional teams, including back-end developers and designers, to implement and refine website and application features. I am committed to continuously monitoring website performance and security, proactively implementing updates and improvements, and ensuring responsive and mobile-friendly design for optimal user accessibility.',
-                'My commitment to staying abreast of industry trends and emerging technologies enables me to provide innovative solutions. I am proficient in troubleshooting and swiftly resolving front-end-related issues, minimizing downtime and user disruptions. Furthermore, I conduct thorough code reviews and uphold coding standards to maintain consistency and quality. My technical support skills extend to providing assistance to clients and end-users when required.',
-                'With a focus on UX/UI design and optimization, I contribute to enhancing user engagement and overall experience. I actively participate in the development and execution of testing plans, identifying and addressing usability or compatibility issues to deliver exceptional web solutions.',
-                'As a Front-end Developer, I combine technical proficiency with a passion for creating engaging and seamless web experiences, consistently delivering results that exceed expectations.',
-            ],
-            responsibilities: [
-                'Development, support, and maintenance of web resources',
-                'Development of websites using CMS WordPress, including working with ready-made templates/constructors and creating themes from scratch',
-                'Maintenance and optimization of large client resources, including conducting migrations, creating backups, and data recovery',
-                'Creation of web applications using popular libraries and frameworks to enhance user experiences and functionality',
-                'Configuration and management of dedicated virtual servers to ensure the reliability and performance of web applications',
-                'Hosting setup and management, including domain configuration and server maintenance',
-                'Collaborating with cross-functional teams, including back-end developers and designers, to implement and refine website and application features',
-                'Continuous monitoring of website performance and security, implementing necessary updates and improvements',
-                'Ensuring responsive and mobile-friendly design for optimal user accessibility',
-                'Staying updated with industry trends and emerging technologies to provide innovative solutions',
-                'Troubleshooting and resolving front-end related issues promptly to minimize downtime and user disruptions',
-                'Conducting code reviews and maintaining coding standards for consistency and quality',
-                'Providing technical support to clients and end-users as needed',
-                'Collaborating on UX/UI design and optimization to enhance user engagement and overall experience',
-                'Participating in the development and execution of testing plans to identify and address any usability or compatibility issues',
-            ],
-            goals: []
-        }
-    },
-    {
-        companyName: `'MIS' LLC`,
-        startDate: 2012,
-        endDate: 2025,
-        country: 'Ukraine',
-        position: `Property Valuation and Accounting Manager`,
-        description: {
-            summary: [
-                `I am an accomplished professional with expertise in property valuation and accounting management. My career combines hands-on experience as a proficient valuator alongside leadership in the field of property assessment and accounting. My practice encompasses conducting valuations of various asset types, including real estate, tangible assets, and financial securities, utilizing recognized valuation techniques and methodologies such as the income approach, market approach, and cost approach. I remain attuned to market trends, economic conditions, and industry-specific factors that influence asset values, ensuring informed decision-making for my clients.`,
-                'As a leader in the valuation and accounting domain, I collaborate closely with clients to understand their unique needs and provide expert guidance throughout the valuation process. I am committed to maintaining the highest standards of accuracy, objectivity, and integrity, ensuring that all valuations comply with industry standards and regulations.',
-                'In addition to my leadership role, I actively engage in practical valuation activities, further enhancing my proficiency and insight. My dual role as a practitioner and department head enables me to provide comprehensive solutions to clients, empowering them to make informed decisions about asset acquisition and management.',
-                'My multifaceted role as a property valuation and accounting manager positions me to deliver comprehensive and informed solutions, underpinned by practical expertise and leadership in the field.'
-            ],
-            responsibilities: [
-                'Conduct valuations of real estate, tangible assets, financial securities, and other assets using recognized valuation techniques',
-                'Stay updated on market trends, economic conditions, and industry-specific factors that may impact asset values',
-                'Apply appropriate valuation methodologies, such as the income approach, market approach, or cost approach, depending on the asset type and purpose of the valuation',
-                'Collaborate with clients to understand their valuation needs, provide expert guidance, and present valuation reports in a clear and understandable manner',
-                'Ensure that all valuations comply with relevant industry standards and regulations',
-                'Maintain the highest standards of accuracy, objectivity, and integrity in the valuation process',
-                'Advise clients on market trends and property values, resulting in the successful purchase of a property at the optimal price'
-            ],
-            goals: []
-        }
-    },
-    {
-        companyName: `SyncSpider`,
-        startDate: '2023',
-        endDate: '2023',
-        country: 'Austria',
-        position: `Frontend developer / designer`,
-        description: {
-            summary: [
-                `I am a versatile Front-end Developer and Designer with a passion for creating visually stunning and high-performance websites. My work revolves around the seamless fusion of design and development, resulting in exceptional user experiences. My expertise spans optimizing WordPress sites for peak performance, crafting custom widgets for dynamic content, implementing robust backup systems, and developing intuitive shortcodes for content generation.`,
-                'In addition, I excel in enhancing website performance through effective caching systems, ensuring cross-browser compatibility, and delivering responsive web design that adapts flawlessly to various devices. I also specialize in leveraging JavaScript, jQuery, and AJAX to add dynamic and interactive elements, making websites not just functional but engaging.',
-                'As a Front-end Developer and Designer, I am dedicated to crafting web solutions that not only meet but exceed client expectations. My blend of design creativity and technical proficiency ensures that websites are not just aesthetically pleasing but also deliver top-notch performance and user satisfaction.',
-            ],
-            responsibilities: [
-                'Optimizing WordPress websites for optimal performance, ensuring that users experience speedy and responsive interactions.',
-                'I take pride in developing and maintaining custom widgets that display dynamic content, enhancing the overall user experience by delivering relevant and engaging information.',
-                'To safeguard data integrity and ensure quick recoveries in case of outages, I developed and implemented a robust backup system, providing peace of mind for clients.',
-                'My expertise extends to developing custom shortcodes, empowering users to effortlessly create complex content, saving time and effort.',
-                'Implementing an efficient caching system is one of my strengths, reducing server load and boosting website performance for smoother navigation.',
-                'Leveraging JavaScript and jQuery, I craft cross-browser compatible web pages that are not only visually appealing but also interactive and engaging.',
-                'My responsive web design skills shine through the use of Bootstrap, creating websites that adapt seamlessly to various devices, optimizing user experiences across the board.',
-                'I have experience developing web pages that communicate with external APIs using AJAX requests, enhancing website functionality and real-time data retrieval.'
-            ],
-            goals: []
-        }
-    },
-    {
-        companyName: `Logoletta GmbH`,
-        startDate: '2023',
-        endDate: '2023',
-        country: 'UK',
-        position: `Frontend developer / designer`,
-        description: {
-            summary: [
-                'I am a skilled Front-end Developer and Designer dedicated to crafting exceptional web experiences. My work revolves around developing custom WordPress themes enriched with features like custom post types and taxonomies. I specialize in optimizing web performance through image and asset optimization while reducing page load times. My commitment to creating seamless user experiences extends to developing custom shortcodes for effortless content generation. Furthermore, I have expertise in implementing robust backup systems to safeguard data integrity and enable quick recoveries in the face of outages.',
-                'In addition, I take pride in educating client personnel, particularly content managers, in effectively using the products I develop. This includes training them on data addition and updates, CMS interface navigation, and other aspects to ensure the seamless management of their digital content.',
-                'In my role as a Front-end Developer and Designer, I blend creativity and technical proficiency to deliver web solutions that not only meet but exceed client expectations. My commitment to optimizing performance, enhancing user experiences, and providing valuable training makes me an asset to any team and organization.',
-            ],
-            responsibilities: [
-                'I have successfully developed custom WordPress themes for clients, incorporating advanced features such as custom post types and taxonomies to meet their specific needs.',
-                'Image and web asset optimization are my forte, significantly improving page loading times and ensuring a swift and responsive user experience.',
-                'I am dedicated to optimizing web page performance by meticulously reducing page load times, making websites more efficient and user-friendly.',
-                'My expertise extends to developing custom shortcodes that empower users to effortlessly create complex content, streamlining content management.',
-                'I have implemented robust backup systems, guaranteeing data integrity and enabling rapid recovery in the event of unexpected outages, ensuring business continuity.',
-                'In addition to my technical responsibilities, I actively engage in educating client personnel, specifically content managers, in the effective utilization of the developed products. This includes training on data addition, updates, and navigating the CMS interface, ensuring that clients can confidently manage their digital content.'
-            ],
-            goals: []
-        }
-
-    },
-    {
-        companyName: `Displayed Web`,
-        startDate: '2022',
-        endDate: '2022',
-        country: 'Sweden',
-        position: `Frontend developer / designer`,
-        description: {
-            summary: [
-                'I am a skilled Front-end Developer and Designer dedicated to crafting exceptional web experiences. My work revolves around developing custom WordPress themes enriched with features like custom post types and taxonomies. I specialize in optimizing web performance through image and asset optimization while reducing page load times. My commitment to creating seamless user experiences extends to developing custom shortcodes for effortless content generation. Furthermore, I have expertise in implementing robust backup systems to safeguard data integrity and enable quick recoveries in the face of outages.',
-            ],
-            responsibilities: [
-                'Developed a full stack web application from scratch, including back-end services, front-end interface, and database',
-                'Developed and maintained custom APIs to integrate WordPress with third-party systems, automating data exchange and saving hundreds of hours of manual effort',
-                'Developed custom shortcodes to enable users to generate complex content with minimal effort',
-                'Developed and implemented a backup system that ensures data integrity and allows for quick recoveries in the event of an outage',
-                'Developed and implemented a caching system that reduces server load and improves website performance',
-            ],
-            goals: []
-        }
-
-    },
-    {
-        companyName: `NEVON CARE INC`,
-        startDate: '2021',
-        endDate: '2021',
-        country: 'Canada',
-        position: `Frontend developer / designer`,
-        description: {
-            summary: [
-                'I am a skilled Front-end Developer and Designer dedicated to crafting exceptional web experiences. My work revolves around developing custom WordPress themes enriched with features like custom post types and taxonomies. I specialize in optimizing web performance through image and asset optimization while reducing page load times. My commitment to creating seamless user experiences extends to developing custom shortcodes for effortless content generation. Furthermore, I have expertise in implementing robust backup systems to safeguard data integrity and enable quick recoveries in the face of outages.',
-            ],
-            responsibilities: [
-                'Developed a full stack web application from scratch, including back-end services, front-end interface, and database',
-                'Developed and maintained custom APIs to integrate WordPress with third-party systems, automating data exchange and saving hundreds of hours of manual effort',
-                'Developed custom shortcodes to enable users to generate complex content with minimal effort',
-                'Developed and implemented a backup system that ensures data integrity and allows for quick recoveries in the event of an outage',
-                'Developed and implemented a caching system that reduces server load and improves website performance',
-            ],
-            goals: []
-        }
-    },
-    {
-        companyName: `Eurostandart - furniture factory`,
-        startDate: '2016',
-        endDate: '2017',
-        country: 'Ukraine',
-        position: `Graphic & technical Designer`,
-        description: {
-            summary: [
-                'I am a versatile Graphic Designer with a rich background in the furniture manufacturing industry. My role transcends conventional design, encompassing the development and implementation of e-commerce solutions, the creation of distinctive brand identities, and the design of captivating outdoor and print advertising materials.',
-                'My expertise extends to crafting design templates for sandblasting, harnessing precision through plotter cutting. I take pride in conceptualizing and designing catalogs showcasing the furniture factory\'s extensive product line.',
-                'My creative journey also ventures into the world of large-scale canvas printing, where I prepare and print wide-format canvases for artistic glass surfaces and facades. Additionally, I collaborate closely with furniture designers, contributing my design insights to the development of new models of upholstered and case furniture.',
-                'In this multifaceted role, I continually explore innovative avenues within the realm of graphic design, bringing fresh perspectives and creative solutions to the furniture manufacturing landscape.',
-                'As a Graphic Designer in the furniture manufacturing domain, I combine creativity with technical proficiency to enhance brand presence and product presentation, contributing to the industry\'s dynamic and evolving landscape.'
-            ],
-            responsibilities: [
-                'Spearheaded the development and implementation of e-commerce, collaborating with developers to create an online store that seamlessly showcases our furniture products',
-                'Cultivated a distinctive brand identity through creative design, establishing a unique visual language that resonates with our target audience',
-                'Designed eye-catching outdoor advertising materials and a range of print collateral, including leaflets, business cards, flyers, stickers, pocket calendars, and more',
-                'Mastered the creation of sandblasting templates, employing plotter cutting for precise pattern preparation',
-                'Showcased the furniture factory\'s product range through the design of visually appealing and informative catalogs',
-                'Undertook pre-print preparation and managed the printing of wide-format canvases, elevating the artistic decoration of glass surfaces and facades with large-scale photographic artwork',
-                'Collaborated closely with furniture designers, lending my design expertise to the development of new models of both upholstered and case furniture',
-                'Continuously explored new avenues in graphic design to bring fresh and innovative approaches to the furniture manufacturing industry'
-            ],
-            goals: []
+            atsSummary: 'Consumer Finance Specialist with a focus on High-Volume POS Operations and Risk Mitigation. Expert in retail lending, cross-selling, and autonomous technical support for remote sales points. Proven track record in early-stage debt management and high-velocity credit processing.',
+            atsResponsibilities: [
+                'Processed 10-15+ credit applications daily in high-traffic retail environments, balancing speed with rigorous risk assessment and KYC protocols.',
+                'Consistently achieved high-margin KPIs for secondary financial products, including credit cards and insurance packages.',
+                'Managed early-stage debt recovery (Soft Collection), maintaining comprehensive communication logs and mitigating Non-Performing Loan (NPL) risks.',
+                'Provided autonomous technical support and infrastructure management for remote sales terminals, ensuring constant system availability.',
+                'Optimized document workflows and data entry in proprietary banking software, maintaining strict confidentiality and data integrity standards.'
+            ]
         }
     },
     {
@@ -630,22 +693,60 @@ export const experience: Experience[] = [
         position: `Owner`,
         description: {
             summary: [
-                'I am a visionary entrepreneur and the driving force behind a successful online retail venture specializing in automotive tires and accessories. My journey began with the transformation of a free solution into a robust e-commerce platform tailored for the automotive industry. With an unwavering commitment to innovation and excellence, I cultivated a product catalog featuring over 3000 unique items.',
-                'At the helm of a dedicated team of four, I led the charge in developing an integrated logistics system for data collection and processing. My multifaceted role as both owner and director encompassed marketing initiatives, order management, supplier identification, and strategic partnerships with wholesale buyers.',
-                'I thrived in a dynamic environment by continuously analyzing market dynamics, evaluating competitors, and optimizing operational processes. My responsibilities extended to meticulous record-keeping and report preparation for regulatory authorities.',
-                'My role as the owner and director of the online retail venture was marked by a relentless pursuit of excellence and a commitment to providing customers with top-quality products and services. I thrived in a dynamic and competitive landscape, driving the business to success through innovation, strategic partnerships, and a customer-centric approach.'
-            ],
+                'Founded and scaled a niche automotive e-commerce platform during the early stages of regional digital retail. Achieved a peak monthly turnover of $7,000 by transforming a legacy PHP engine into a robust, high-traffic sales channel with over 3,000 active SKUs.',
+                'Pioneered a DIY data-aggregation pipeline, utilizing advanced Excel models and relational databases to standardize heterogeneous price lists from multiple suppliers. This system enabled real-time inventory updates and a competitive pricing strategy in a volatile post-crisis market.',
+                'Managed end-to-end business operations while simultaneously pursuing professional growth in the banking sector. Built a full-suite brand identity from scratch, including custom-designed financial documents, B2B contracts, and offline marketing assets.'            ],
             responsibilities: [
-                'Spearheaded marketing efforts independently, utilizing social media advertising, outdoor campaigns, and print media promotions to enhance brand visibility and drive customer engagement',
-                'Managed the entire order cycle, from order placement to fulfillment, ensuring a seamless and efficient customer experience',
-                'Identified and fostered relationships with reliable suppliers, negotiating supply agreements and collaborative partnerships to secure quality products',
-                'Successfully expanded the business by identifying and establishing strategic collaborations with major wholesale buyers, contributing to revenue growth',
-                'Conducted comprehensive market research, analyzing competitors and sales data to make informed decisions and stay ahead of industry trends',
-                'Continuously optimized operational processes to enhance efficiency and productivity, facilitating timely order processing and delivery',
-                'Ensured strict compliance with regulatory requirements, overseeing the preparation of necessary reports and documentation for regulatory authorities',
-                'Fostered a culture of innovation, leading the adaptation and enhancement of the e-commerce platform to meet evolving market demands',
+                'Architected a custom "Multi-Tier Supply Chain" model, using Excel-based automation to aggregate and normalize large-scale supplier datasets for web import.',
+                'Executed full-cycle frontend and backend customizations (PHP, HTML, CSS), optimizing product filters and UI/UX for a data-heavy automotive catalog.',
+                'Directed strategic marketing and brand development, designing all proprietary assets: from branded invoices and contracts to high-conversion print media (leaflets, flyers).',
+                'Managed financial planning, cash flow optimization, and regulatory reporting, ensuring business sustainability through the 2008-2010 economic recovery.',
+                'Negotiated with regional wholesale distributors to secure exclusive supply terms, maintaining a 99% order fulfillment rate for a growing B2C client base.'            ],
+            goals: [
+                'Automate 90% of supplier data normalization processes',
+                'Scale monthly revenue to $7,000+ during an economic downturn',
+                'Establish the brand as a top-3 regional niche player in automotive retail'
             ],
-            goals: []
+            atsSummary: 'Founder & CEO with a background in E-commerce scaling and Data Operations. Expert in building custom sales platforms, automating supply chain data (Excel/DB), and multi-channel brand management. Proven ability to drive profitability ($7k/mo turnover) and technical self-sufficiency in high-pressure environments.',
+            atsResponsibilities: [
+                'Founded and scaled a profitable automotive e-commerce venture, managing a database of 3,000+ SKUs and achieving $7k+ monthly revenue.',
+                'Engineered a custom data-processing pipeline using Excel and databases to normalize and aggregate diverse supplier price lists for web integration.',
+                'Self-taught and implemented full-stack web modifications (PHP/CSS), enhancing platform functionality and search engine visibility.',
+                'Directed end-to-end business operations, including strategic B2B negotiations, financial auditing, and brand asset design.',
+                'Developed and optimized a proprietary logistics and order fulfillment system, significantly reducing overhead and improving customer retention.'
+            ]
+        }
+    },
+    {
+        startDate: 2003,
+        endDate: 2006,
+        companyName: `Commodity Exchange "Donetsk Universal Commodity Exchange"`,
+        country: 'Ukraine',
+        position: `IT Support & Network Technician`,
+        description: {
+            summary: [
+                'Architected and maintained the foundational IT infrastructure for a regional commodity exchange, managing a 20-node local network and central server environment. Ensured 100% operational uptime during high-stakes trading sessions through rapid hardware diagnostics and software troubleshooting.',
+                'Led a large-scale data digitization initiative, migrating legacy paper registries (up to 3,000 records per dataset) into digital formats. Focused on establishing a reliable LAN environment to facilitate seamless data exchange, storage, and real-time processing across the enterprise.',
+                'Managed the full lifecycle of workstation and network maintenance, from physical cabling and router configuration to emergency technical support in high-pressure "trading floor" scenarios.'            ],
+            responsibilities: [
+                'Designed and deployed a robust Local Area Network (LAN) infrastructure, including physical cabling, crimping, and router configuration to ensure seamless server-client connectivity.',
+                'Orchestrated the digitization and structural processing of extensive employee and inventory registries (1,500–3,000 entries per project), improving data accessibility and reporting accuracy.',
+                'Executed "emergency response" technical support for hardware and software during active trading hours, minimizing downtime and ensuring transaction continuity.',
+                'Administered the central exchange server, managing user permissions, data backups, and workstation synchronization across 20+ points of sale.',
+                'Performed routine hardware maintenance and preventive software audits to extend equipment lifecycle and optimize system performance.'            ],
+            goals: [
+                'Establish 100% network connectivity across all 20+ workstations',
+                'Digitize and archive all legacy paper-based employee registries',
+                'Ensure zero-downtime during critical commodity trading windows'
+            ],
+            atsSummary: 'IT Support & Network Technician with 3 years of experience in regional financial infrastructure. Expert in LAN deployment, hardware troubleshooting, and large-scale data digitization. Proven ability to maintain system uptime in high-pressure trading environments and manage end-to-end IT operations for small-to-medium networks.',
+            atsResponsibilities: [
+                'Engineered and maintained a 20-node LAN infrastructure, overseeing physical cabling, router setup, and server-client synchronization.',
+                'Led data digitization efforts for massive corporate registries (3,000+ records), ensuring accurate transition from paper to digital databases.',
+                'Provided mission-critical technical support for hardware and software systems during active trading sessions, resolving issues in high-velocity environments.',
+                'Managed server-side operations and workstation security, implementing regular maintenance and software updates to ensure operational reliability.',
+                'Optimized IT infrastructure performance through proactive hardware diagnostics and network troubleshooting.'
+            ]
         }
     },
     {
@@ -653,25 +754,102 @@ export const experience: Experience[] = [
         startDate: '2018',
         endDate: '2019',
         country: 'Ukraine',
-        position: `Chief Designer`,
+        position: `Chief Technical Designer & Operations Architect`,
         description: {
             summary: [
-                'I am a seasoned Chief Designer specializing in the realm of souvenir craftsmanship. My journey unfolds within a company dedicated to the development and production of exquisite souvenir items. Our portfolio ranges from custom-printed mugs, pens, and apparel to meticulously crafted wooden and plywood souvenirs, including commemorative magnets, unique photo frames, Christmas ornaments, decorative boxes, children\'s toys, handcrafted lamps, wooden portraits, and much more. My expertise also encompasses the precision of laser cutting and engraving on wood and various materials.',
-                'At the heart of this creative endeavor, I embarked on a multifaceted role. I relentlessly pursued innovative ideas to expand our product catalog. My responsibilities spanned the conceptualization and design of layouts and blueprints for printing, cutting, and engraving, leveraging CNC equipment. Additionally, I played a pivotal role in quality control, ensuring that our crafted pieces met the highest standards of excellence.',
-                'In my capacity as the Chief Designer of the souvenir workshop, I infused every design with passion and creativity, elevating the art of souvenir craftsmanship. My commitment to innovation, quality, and precision allowed us to offer an extensive range of unique and memorable keepsakes to our customers, creating lasting impressions and cherished memories.',
-            ],
+                'Spearheaded the technical design and production infrastructure for a high-end souvenir and industrial engraving workshop. Engineered a diverse product ecosystem (500+ SKUs) utilizing CO2 laser-cutting technology and parametric vector design with sub-millimeter precision.',
+                'Architected a proprietary order management and pricing system using Google Workspace, streamlining task delegation, cross-functional quality control, and real-time project tracking. This transformation enabled the facility to scale operations and handle extreme production loads during peak seasonal demands.',
+                'Pioneered advanced wood-engineering techniques, including "living hinges," complex mortise-and-tenon joints, and magnetic interlocking systems. Led intensive R&D efforts across diverse materials, including leather, acrylics, rubber, and industrial textiles.'            ],
             responsibilities: [
-                'Led the charge in exploring novel concepts to diversify and expand the range of souvenir products offered, fostering creativity and innovation within the organization',
-                'Developed intricate layouts and precise blueprints, meticulously preparing designs for printing, cutting, and engraving, harnessing the capabilities of CNC equipment',
-                'Assumed a critical role in quality assurance, conducting thorough checks and adaptations to guarantee the impeccable craftsmanship of each product',
-                'Demonstrated versatility by adapting and optimizing designs to suit various mediums, ensuring consistent quality across all product categories',
-                'Leveraged laser cutting and engraving techniques with exceptional precision, elevating the level of intricacy and detail in our wooden and material-based souvenirs',
-                'Collaborated closely with skilled artisans to transform designs into tangible, handcrafted masterpieces, fostering a harmonious blend of artistry and functionality',
+                'Developed high-fidelity, parametric blueprints in CorelDRAW and Illustrator, optimizing complex 2D layouts for 3D assembly and CNC laser processing.',
+                'Engineered intricate functional joinery (living hinges, press-fit joints, magnetic connectors) for high-end wooden mechanics and lifestyle products.',
+                'Architected and implemented a cloud-based operational system (Google Workspace) for order registration, automated pricing, and cross-departmental QA workflows.',
+                'Directed full-scale production cycles for a wide array of materials: from industrial plastics and rubber to premium leather and textiles, ensuring optimal laser power-frequency calibration for each.',
+                'Managed high-intensity production schedules, optimizing CNC machine loading to ensure 100% equipment utilization and meeting tight turnaround deadlines.',
+                'Collaborated with artisans to translate technical CAD drawings into handcrafted masterpieces, maintaining rigorous quality standards at every stage of the assembly.'            ],
+            goals: [
+                'Scale the product catalog through innovative wood-bending and joinery techniques',
+                'Automate production management and cost calculation using shared cloud environments',
+                'Achieve 100% design accuracy for self-assembling mechanical kits'
             ],
-            goals: []
+            atsSummary: 'Chief Technical Designer & Operations Manager specialized in CNC-driven manufacturing and industrial product design. Expert in CO2 laser-cutting, parametric vector engineering (CorelDRAW/Illustrator), and cloud-based operations management. Proven ability to architect complex technical joinery and manage high-volume production cycles across diverse materials.',
+            atsResponsibilities: [
+                'Engineered parametric technical blueprints for CO2 laser-cutting equipment, ensuring precision to 0.1mm for complex assembly kits.',
+                'Developed and deployed a centralized order tracking and cost calculation system using Google Workspace, increasing operational transparency and team velocity.',
+                'Innovated production techniques for functional wooden products, implementing living hinges, magnetic joints, and mortise-and-tenon assembly systems.',
+                'Optimized production workflows for multi-material manufacturing, including laser engraving and cutting for wood, acrylic, leather, and textiles.',
+                'Led quality assurance and technical feasibility audits, reducing production waste through optimized nesting and vector pathing.'
+            ]
         }
     },
-
+    {
+        companyName: 'Magic Forest / MatterIQ',
+        startDate: '2024',
+        endDate: '2025',
+        country: 'Georgia (Batumi)',
+        position: 'Operations & Technical Lead (O2O Transformation)',
+        description: {
+            summary: [
+                'Directed the end-to-end digital and physical transformation of a retail venture, shifting from a legacy offline model to a high-performance O2O (Offline-to-Online) ecosystem. Achieved a measurable 40–60% revenue increase within 12 months.',
+                'Architected a unified retail infrastructure using Shopify, integrating inventory management, POS terminals, and digital storefronts. Managed the full-cycle digitization of 1,000+ SKUs, including SEO-optimized content and technical photography.',
+                'Founded "MatterIQ" as a technical R&D branch focused on additive manufacturing (3D printing). Managed the technical commissioning of a 3D printing farm, conducting material science experiments with diverse filaments and post-processing techniques.'
+            ],
+            responsibilities: [
+                'Executed a complete Shopify migration, automating inventory tracking, financial reporting, and multi-channel sales (Online + In-store POS).',
+                'Redesigned the physical retail environment (UX/UI for physical space), optimizing product placement, lighting, and customer flow to enhance engagement.',
+                'Developed unconventional "Street-to-Store" marketing assets, integrating audio-visual engagement and interactive outdoor installations (classic games, length-jump scales) to increase foot traffic.',
+                'Managed the technical setup and maintenance of high-precision 3D printers, optimizing slicing parameters and material post-processing (painting/finishing).',
+                'Conducted full-scale inventory audits and digitized the entire product catalog, establishing data integrity across all sales platforms.'
+            ],
+            goals: [
+                'Increase overall revenue by 50% through O2O integration',
+                'Automate 100% of retail inventory management via Shopify',
+                'Establish a functional 3D printing R&D pipeline for custom souvenirs'
+            ],
+            // ATS-ОПТИМИЗИРОВАННЫЙ БЛОК
+            atsSummary: 'Operations & Technical Lead specialized in O2O (Offline-to-Online) business transformation and additive manufacturing. Expert in Shopify ecosystem, retail automation, and 3D printing R&D. Proven track record in increasing revenue by 40–60% through digital integration and strategic physical space optimization.',
+            atsResponsibilities: [
+                'Led the digital transformation of a retail business, implementing a Shopify-based POS and E-commerce system that drove a 60% revenue boost.',
+                'Digitized and managed a complex product catalog of 1,000+ SKUs, optimizing inventory turnover and data accuracy.',
+                'Managed the technical commissioning and R&D for a 3D printing operation (MatterIQ), optimizing print techniques and material durability.',
+                'Optimized physical store layouts and outdoor marketing strategies, significantly increasing customer retention and foot traffic metrics.',
+                'Directed technical infrastructure maintenance, including POS hardware, networking, and high-precision 3D printing equipment.'
+            ]
+        }
+    },
+    {
+        companyName: 'Summer 365',
+        startDate: '2025',
+        endDate: '2025',
+        country: 'Georgia',
+        position: 'Lead Technical Engineer (CNC Systems)',
+        description: {
+            summary: [
+                'Spearheaded the international procurement, logistics, and commissioning of a large-format CNC system (3000*1500mm) for high-precision HPL panel processing on a construction site.',
+                'Executed the full technical assembly and calibration of the CNC machinery, including gantry alignment, spindle synchronization, and stepper motor configuration. Built a dedicated industrial workstation and integrated CAM software for optimized facade-milling workflows.'
+            ],
+            responsibilities: [
+                'Managed the end-to-end logistics and customs clearance for industrial CNC equipment imported from China to Georgia.',
+                'Assembled and calibrated a 3-axis CNC router (3000*1500mm), ensuring sub-millimeter precision for internal and external HPL panel cutting.',
+                'Architected the industrial control workstation, selecting and configuring specialized CAD/CAM software for optimized milling paths.',
+                'Conducted rigorous stress-testing and technical handover, training the onsite team on safety protocols and G-code execution.'
+            ],
+            goals: [
+                'Deploy a production-ready CNC system within a construction site environment',
+                'Achieve 100% precision in HPL panel milling for architectural facades',
+                'Establish autonomous onsite technical operations through staff training'
+            ],
+            // ATS-ОПТИМИЗИРОВАННЫЙ БЛОК
+            atsSummary: 'Lead Technical Engineer specialized in the procurement, assembly, and commissioning of industrial CNC machinery. Expert in systems integration, hardware calibration (Gantry/Spindle/Stepper), and CAD/CAM software architecture. Proven ability to manage complex international logistics and technical handovers for large-scale manufacturing projects.',
+            atsResponsibilities: [
+                'Engineered the end-to-end assembly and technical commissioning of a large-format industrial CNC router, ensuring high-precision structural alignment.',
+                'Orchestrated international supply chain and customs operations for heavy industrial equipment, managing risk and delivery timelines.',
+                'Developed and optimized industrial milling workflows using specialized CAM software, significantly increasing production efficiency on-site.',
+                'Executed comprehensive hardware calibration and performance stress-testing to meet rigorous architectural standards for HPL processing.',
+                'Provided expert-level technical training on CNC operations, G-code execution, and industrial safety protocols for construction personnel.'
+            ]
+        }
+    },
     // ... остальные записи об опыте работы ...
 ];
 
