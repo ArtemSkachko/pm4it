@@ -20,6 +20,7 @@
     "nextjs-toploader": "^3.9.17",
     "react": "19.2.4",
     "react-dom": "19.2.4",
+    "remark-gfm": "^4.0.1",
     "shiki": "^4.0.2"
   },
   "devDependencies": {
